@@ -31,7 +31,7 @@
 % If there are multiple affiliations, use superscript numerals to associate
 %  each author with his or her affiliations, as in the example below.
 
-\author { Brian Zenger$^{1,2,3,4}$, Wilson W. Good$^{1,2,3}$, Jake Bergquist$^{1,2,3}$ Jess D. Tate$^{1,2,3}$, Vikas Sharma$^{4}$, Rob S. MacLeod$^{1,2,3}$\\
+\author { Brian Zenger$^{1,2,3,4}$, Wilson W. Good$^{1,2,3}$, Jake Bergquist$^{1,2,3}$ Jess D. Tate$^{1,2,3}$, Vikas Sharma$^{4}$, \\Rob S. MacLeod$^{1,2,3}$\\
 \ \\ % leave an empty line between authors and affiliation
 $^1$ Scientific Computing and Imaging Institute, University of Utah, SLC, UT, USA \\
 $^2$  Nora Eccles Cardiovascular Research and Training Institute, University of Utah, SLC, UT, USA \\
@@ -44,10 +44,35 @@ $^4$ School of Medicine, University of Utah, SLC, UT, USA }
 % sets the text of the abstract in italics as required.
 \begin{abstract}
 
- Clinical tests to detect acute myocardial ischemia induce transient cardiac stress by means of exercise or pharmaceutical stimulation and measure electrical changes of the heart on the body surface via an electrocardiogram (ECG).  Such tests assume that both stress mechanisms induce identical —or at least similar— forms of ischemia. However, these tests have been known to contradict each other. To improve ECG detection of myocardial ischemia, we must study how varied stressing agents (pharmacological or paced stressors) change ECG signatures. To do this we simultaneously measured electrical recordings within the myocardium, on the epicardial surface, and on the body surface. We then induced acute, controlled ischemia and monitored the electrical response. To create ischemia we applied a constant hydraulic occlusion of the left anterior descending coronary artery. We varied the heart stress with two commonly used clinical protocols, the BRUCE and dobutamine stress tests. Each episode lasted  15 minutes with stepwise increase in pacing rate or pharmacological infusion rate every 3 minutes. Preliminary qualitative results suggest significant differences in the recorded electrical signal between pacing and pharmacological stress mechanisms. Differences include the location and volume of ischemia and its temporal development throughout an ischemic event. These results, although preliminary, are a significant breakthrough in the field with simultaneous electrical recordings on the three major regions on the heart/torso. 
-
-
-
+    Clinical tests to detect acute myocardial ischemia induce transient
+    cardiac stress by means of exercise or pharmaceutical stimulation and
+    measure electrical changes of the heart on the body surface via an
+    electrocardiogram (ECG).  Such tests assume that both stress mechanisms
+    induce identical--—or at least similar—--forms of ischemia. However,
+    [|results of] these tests have been known to contradict each other. To
+    improve [ECG|electrocardiographic <Pay attention to how you define ECG
+    and use it consistently that way.>] detection of myocardial ischemia,
+    we must study how varied stressing agents (pharmacological or paced
+    stressors) change [ECG|electrocardiographic] signatures. [To do this
+    we|We] simultaneously measured electrical recordings within the
+    myocardium, on the epicardial surface, and on the body surface. We then
+    induced acute, controlled ischemia and monitored the electrical
+    response. To create [|the hemodynamic substrate for] ischemia[|,] we
+    applied a constant hydraulic occlusion [of|to] the left anterior
+    descending coronary artery. We varied the [heart|ischemic] stress with
+    two commonly used clinical protocols, the BRUCE and dobutamine stress
+    tests. Each episode lasted 15 minutes with stepwise increase in pacing
+    rate or pharmacological infusion rate every 3 minutes. Preliminary
+    qualitative results suggest significant differences in the recorded
+    electrical signal between pacing and pharmacological stress
+    mechanisms. Differences include the location and volume of ischemia and
+    its temporal development throughout an [ischemic event|stress episode
+    <try to use the same words for details like ``episode''>]. These
+    results, [although preliminary|and the experimental means used to
+    obtain them], are a significant breakthrough in the field with
+    simultaneous[|, high density] electrical recordings [on|within] the
+    [three major regions on the heart/torso|myocardium and on the heart and
+    torso surfaces].
 
 \end{abstract}
 % LaTeX inserts the extra space here automatically.
@@ -56,11 +81,65 @@ $^4$ School of Medicine, University of Utah, SLC, UT, USA }
 % Section numbering is automatic.  The examples on the next page
 % illustrate how to make subsections.
 
-Ischemic heart disease is one of the most common heart pathologies, effecting over 8 million people globally. \cite{Roth2015} Myocardial ischemia occurs when the demand for nutrients and perfusion by the heart outweighs the available supply. This creates a supply-demand mismatch that can lead to devastating long term consequences including increased risk for myocardial infarction, cardiac arrhythmia, and sudden cardiac death.\cite{Roth2015} For decades the electrocardiogram (ECG) has been the primary acute detection method for myocardial ischemia. \cite{McCarthy1990} However, current ECG methods used to detect myocardial ischemia are mediocre at best, with reported sensitivity and specificity ranging from 50-72\% and 69-90\%, respectively. \cite{Akkerhuis2011} This poor ECG performance indicates that many patients are released from clinical care unaware of their potentially life-threatening condition while others receive care they do not need. Improvements in the electrical detection of myocardial ischemia must be made to ensure patients and physicians can be confident in diagnosing and treating myocardial ischemia early to prevent potentially fatal long term consequences. 
+% [|<Note that the spacing \cite commands is important.
+% `globally. \cite{Roth2015}' creates a gap while
+% `globally.\cite{Roth2015}' produces none.  I like the latter convention
+% but the main thing is to be consistent.]
 
-One possible source of this poor ECG performance may originate from different cardiac stressing mechanisms. Clinical tests  induce transient cardiac stress by means of exercise or pharmaceutical stimulation and measure electrical changes of the heart on the body surface via an  ECG. Such tests  assume that both mechanisms induce identical, or at least similar, forms of ischemia. However, no definitive experiments have been reported that assess the electrical differences produced during different stressing mechanisms. Studies that have reported electrical findings for both stress types have shown different electrical morphologies of ischemia. These contradictions indicate that the different cardiac stressing methods may not produce identical regions of ischemia and substantiates a controlled examination of the methods used to stress the heart. 
+Ischemic heart disease is one of the most common heart pathologies,
+effecting over 8 million people globally. \cite{Roth2015} Myocardial
+ischemia occurs when the demand for nutrients and perfusion by the heart
+outweighs the available supply. This [|imbalance <avoid ambiguity in
+reference pronouns by using them rarely>] recreates a supply-demand
+mismatch that can lead to devastating long term consequences including
+increased risk for myocardial infarction, cardiac arrhythmia, and sudden
+cardiac death.\cite{Roth2015} For decades the electrocardiogram (ECG) has
+been the primary acute detection method for myocardial
+ischemia. \cite{McCarthy1990} However, current [ECG|electrocardiographic]
+methods used to detect myocardial ischemia are mediocre at best, with
+reported sensitivity and specificity ranging from 50-72\% and 69-90\%,
+respectively. \cite{Akkerhuis2011} This poor [ECG|] performance indicates
+that many patients are released from clinical care unaware of their
+potentially life-threatening condition while others receive care they do
+not need. Improvements in the electrical detection of myocardial ischemia
+must be made to ensure patients and physicians can be confident in
+diagnosing and treating myocardial ischemia early to prevent potentially
+fatal long term consequences.
 
-To improve ECG detection of myocardial ischemia, we must study how varied stressing agents (pharmacological or paced stressors) change ECG signatures. To date, no experimental model provides accurately sampling of electrical signals within the myocardial tissue, on the heart surface, and on the body surface with control precise ischemic control. A model with all of these components is necessary to understand how the ischemic regions develop within the heart, and how they manifest on the body surface. For this study, our goal was to test the differences in myocardial ischemia development under controlled experimental conditions. We tested two cardiac stressing mechanisms, pacing the heart following average heart rates of a BRUCE protocol and continuous dobutamine infusion rates of a standard clinical protocol. 
+One possible source of this poor ECG[|-based] performance may originate
+from different cardiac stressing mechanisms. Clinical tests induce
+transient cardiac stress by means of exercise or pharmaceutical stimulation
+and measure electrical changes of the heart on the body surface via an
+ECG. Such tests assume that both mechanisms induce identical, or at least
+similar, forms of ischemia. However, no definitive experiments have been
+reported that assess the electrical [differences|effects] produced during
+different stressing mechanisms. [Studies that have reported electrical
+findings for both stress types have shown different electrical morphologies
+of ischemia.|<This is a little vague and lacks a reference, which it really
+needs.] These contradictions indicate that the different cardiac stressing
+methods may not produce identical regions [|or types] of ischemia and
+substantiates a controlled examination of [the methods used to stress the
+heart|these methods].
+
+[To improve [ECG|electrocardiographic] detection of myocardial ischemia, we
+must study how varied stressing agents (pharmacological or paced stressors)
+change ECG signatures.|<This sentence is a restatement of the last
+paragraph and fails to summarize the actual content of this paragraph.  I
+would leave it out. The next sentence works much better and is an impactful
+statement to have clearly stated.>] To date, no experimental model
+[provides|has provided] accurate[ly| and comprehensive] sampling of
+electrical signals [|from controlled ischemia] within the myocardial
+tissue, on the heart surface, and on the body surface [with control precise
+ischemic control|<This phrase shift the end-of-sentence emphasis away from
+the really interesting statement to a less interesting one. I buried this
+less information within the sentence.>]. A model with all of these
+components is necessary to understand how the ischemic regions develop
+within the heart, and how they manifest on the body surface. For this
+study, our goal was to test the differences in myocardial ischemia
+development under [controlled experimental conditions. We tested|] two
+[|clinical] cardiac stressing mechanisms, pacing the heart [following
+average heart rates of | according to the] BRUCE protocol and continuous
+dobutamine infusion[ rates of a standard clinical protocol|].
 
 
 %
@@ -77,56 +156,189 @@ To improve ECG detection of myocardial ischemia, we must study how varied stress
 
 \subsection{Animal Model} 
 
-Swine and canine animal models were selected for this experimental preparation. Both species were chosen because of their similar cardiac anatomy, electrical system, and vascular structure to humans. The animals of each species were 25-35 kg in weight and 8 months to several years of age. The animals were purpose bread for the use in experimental research. All studies were approved by the Institutional Animal Care and Use Committee at the University of Utah and conformed to the Guide for Care and Use of Laboratory Animals. After 12 hours of fasting the animals were sedated using an intravenous propofol bolus of 5-8 mg/Kg in canines or a mixture of Telazol (4.4 mg/kg), Ketamine (2.2 mg/kg), and Xylazine (2.2 mg/kg) in swine through intravenous access and then intubated. Once intubated, isoflurane gas (1-5\%) was used for anesthesia. At the end of the experiment animals were euthanized while under general anesthesia, with intravenous Beuthanasia 1 ml/10 Kg. The heart was then removed for further evaluation.
+Swine and canine animal models were selected for this experimental
+preparation[. Both species were chosen|] because of their similar cardiac
+anatomy, electrical system, and vascular structure to humans. The animals
+of each species were [25-35 | <Time to learn about the three different
+dashes in LaTex, the hyphen (-), the range (--), and the parenthetical
+expression (---).  Here, we use --.> 25--35] kg in weight and 8 months to
+several years of age. The animals were purpose [bread|bred] for [the|] use
+in experimental research[. All| and all] studies were approved by the
+Institutional Animal Care and Use Committee at the University of Utah and
+conformed to the Guide for Care and Use of Laboratory Animals. After 12
+hours of fasting[|,] the animals were sedated using an intravenous propofol
+bolus of [5-8 mg/Kg | 5--8~mg/Kg] in canines or a mixture of Telazol
+(4.4~mg/kg), Ketamine (2.2~mg/kg), and Xylazine (2.2~mg/kg) in swine
+[through intravenous access|] and then intubated. Once intubated,
+isoflurane gas (1-5\%) was used for anesthesia. At the end of the
+experiment animals were euthanized while under general anesthesia, with
+intravenous Beuthanasia 1~ml/10~Kg. The heart was then removed for further
+evaluation.
 
 \subsection{Surgical Procedure}
 
-Following sedation, a sternotomy was performed to expose the thoracic cavity. The pericardium was opened and the heart was suspended in a pericardial cradle. Following exposure, a portion of the left anterior descending (LAD) coronary artery was dissected and a calibrated hydraulic occluder (Access Technologies, Skokie, IL, USA) was placed around the dissected portion of the LAD coronary. An atrial pacing clip was then placed on the appendage of the right atria. Following placement of the electrical recording equipment (described below), the pericardium was sutured closed and the sternum was wired and sutured together. To limit air within the volume conductor, chest tubes were tunneled into the mediastinal, pleural, and pericardial cavities and held under constant vacuum suction. The outer layers of dermis were sutured closed and checked for potential separations. Standard laboratory markers were measured and recorded throughout the experiment including blood pH, PaCO2, oxygen saturation, temperature, and blood pressure.  
+Following sedation, a sternotomy was performed to expose the thoracic
+cavity. The pericardium was opened and the heart was suspended in a
+pericardial cradle. Following exposure, a portion of the left anterior
+descending coronary artery (LAD) was dissected and a calibrated hydraulic
+occluder (Access Technologies, Skokie, IL, USA) was placed around the
+dissected portion [of the LAD coronary|]. An atrial pacing clip was then
+placed on the appendage of the right [atria|atrium]. Following placement of
+the electrical recording equipment (described below), the pericardium was
+sutured closed and the sternum was wired and sutured together. To limit air
+within the volume conductor, chest tubes were tunneled into the
+mediastinal, pleural, and pericardial cavities and held under constant
+vacuum suction. The outer layers of dermis were sutured closed and checked
+for potential separations. Standard laboratory markers were measured and
+recorded throughout the experiment including blood pH,
+[PaCO2|${\rm PaCO_2}$ <Another LaTeX trick>], oxygen saturation,
+temperature, and blood pressure.
 
 \subsection{Electrical Recording Equipment}
 
 \subsubsection{Electrode Arrays}
 
-Electrical recording equipment was all custom build at the Nora Eccles Treadwell Cardiovascular Research and Training Institute (CVRTI). The electrical signals within the myocardium were measured using transmural plunge needle arrays with 10 electrodes spaced 1.6 or 1.0 mm apart for left and right ventricular needles respectively. For these experiments 12-25 needles were placed in the assumed perfusion bed of the LAD coronary and concentrated on the anterior surface of the heart. The epicardial potentials were measured using a 247 electrode sock array with evenly spaced electrodes stitched into a nylon stocking material. The distance between sock electrodes was approximately 10 mm. The torso surface electrodes were in linear strips of 12 electrodes evenly spaced at 3 cm apart. Each electrode had an 11 mm diameter Ag-AgCl sensor embedded in an epoxy housing with a 2 mm deep gel cavity. The number of strips applied to the torso surface varied between 6-10 electrode strips (72-120 electrodes) depending on surface area available for each animal. 
+Electrical recording equipment was all custom build at the Nora Eccles
+Treadwell Cardiovascular Research and Training Institute (CVRTI). The
+electrical signals within the myocardium were measured using transmural
+plunge needle arrays with 10 electrodes spaced 1.6 or 1.0 mm apart for left
+and right ventricular needles[|,] respectively. For these experiments[|,]
+[12-25|12--25] needles were placed in the assumed perfusion bed of the LAD
+[coronary|] and concentrated on the anterior surface of the heart. The
+epicardial potentials were measured using a 247-electrode sock array with
+evenly spaced electrodes stitched into a nylon stocking material. The
+distance between sock electrodes was approximately 10~mm. The torso surface
+electrodes were in linear strips of 12 electrodes evenly spaced at 3~cm
+[apart|]. Each electrode had an 11~mm diameter Ag-AgCl sensor embedded in
+an epoxy housing with a 2~mm deep gel cavity. The number of strips applied
+to the torso surface varied between [6-10|6--10] [electrode strips|]
+([72-120|72--120 total] electrodes) depending on [|the body] surface area
+[available|accessible] for each animal.
 
 \subsubsection{Data Acquisition}
 
-The potentials from the sock, needle, and torso surface electrodes were recorded using a custom acquisition system. This system could record simultaneously from 1024 channels at 1 kHz sampling rate and 12 bit resolution. Briefly, the acquisition system consisted of multiplexers, interface circuitry, and a personal computer (PC) hosting a custom program written in Labview (National Instruments, Austin, TX, USA) that managed the hardware and allowed continuous signal acquisition. A band pass filter with cutoff frequencies at 0.03 and 500 Hz avoided both DC potentials and aliasing. Wilson's central terminal leads were used as the remote reference for all the unipolar signals recorded from the sock, needle, and torso surface electrodes. Prior to each experiment, calibration signals were recorded for each channel to be gain adjusted.  
+The potentials from the sock, needle, and torso surface electrodes were
+recorded using a custom acquisition system. This system could record
+simultaneously from 1024~channels at 1~kHz sampling rate and 12~bit
+resolution. Briefly, the acquisition system consisted of multiplexers,
+interface circuitry, and a personal computer (PC) hosting a custom program
+written in Labview (National Instruments, Austin, TX, USA) that managed the
+hardware and allowed continuous signal acquisition. A bandpass filter with
+cutoff frequencies at 0.03 and 500~Hz avoided both DC potentials and
+aliasing.  Wilson's central terminal leads were used as the remote
+reference for all the unipolar signals recorded from the sock, needle[|s],
+and torso surface electrodes. Prior to each experiment, calibration signals
+were recorded for each channel[ to be gain adjusted|More detail than
+needed>].
 
 
 \subsection{Ischemia Intervention Protocols}
 
-During an experiment several transient ischemic interventions could be induced. Each of these interventions lasted between 8-15 minutes and were followed by a 30 minute rest period. The BRUCE exercise stress was simulated by increasing paced heart rate a set amount above resting heart rate every three minutes for fifteen minutes. This increase in heart rate was predetermined from average increased heart rates during BRUCE stress protocols reported in the literature. \cite{Okin1986a} The occlusion percentage was fixed throughout the 15 minute time interval. The intervention was terminated with the presence of three or more premature ventricular contractions in series. Standard clinical dobutamine testing was used also tested. During the dobutamine stress test the model was continuously infused at a set dose for three minutes. Dosages used followed the standard dobutamine stress testing protocols. \cite{Secknus1997} This intervention again lasted 15 minutes or until a series of three premature ventricular contractions occurred. 
+During [an|each] experiment[|,] several transient ischemic interventions
+could be induced. Each of these interventions lasted between [8-15|8--15]
+minutes and were followed by a 30-minute rest period. The BRUCE exercise
+stress was simulated by increasing paced heart rate a set amount above
+resting heart rate every three minutes for fifteen minutes. This increase
+in heart rate was predetermined from [average increased heart rates
+during|] BRUCE stress protocols reported in the
+literature. \cite{Okin1986a} The occlusion percentage was fixed throughout
+the [15 minute time <You say 8--15 above so this looks contradictory and is
+not needed>|stress] interval. The intervention was terminated with the
+presence of [|a sequence of] three or more premature ventricular
+contractions [in series|]. [Standard clinical dobutamine testing was used
+also tested.|] During the dobutamine stress [test|protocol,] the
+[model|animal] was continuously infused at a [set dose|a sequence of doses,
+each] for three minutes. Dosages [used|] followed the standard [|clinical]
+dobutamine stress testing protocols[.|] \cite{Secknus1997} [This|and the]
+intervention again lasted 15 minutes or until a [series|sequence] of three
+premature ventricular contractions occurred.
 
 \subsubsection{Image Acquisition and Segmentation}
 
-After each experiment the intact torso was imaged with a clinical 3 Tesla MRI (Seimens Medical) for gross anatomy and electrode positions. Following the full torso scan, the heart was excised and scanned with a 7 Tesla MRI scanner (Bruker BIOSPEC 70/30, Billerica, MA) using FISP (Fast Imaging with  Steady-state Precession) and FLASH (Fast Low Angle Shot) imaging  sequences. To visualize fiber orientation in the heart, a diffusion-weighted MRI sequence was also performed for each excised heart. Capitalizing on the combined advantages of both FISP (consistent volume boundaries) and FLASH sequences (high internal contrast), we  produced realistic geometric segmentations of cardiac tissue, blood, and  transmural plunge needle geometries using the Seg3D (https://www.sci.utah.edu/software/seg3d) open-source software package.
+After each experiment[|,] the intact torso was imaged with a clinical
+3-Tesla MRI (Seimens Medical) for gross anatomy and electrode
+positions. Following the full torso scan, the heart was excised and scanned
+with a 7-Tesla MRI scanner (Bruker BIOSPEC 70/30, Billerica, MA) using FISP
+(Fast Imaging with Steady-state Precession) and FLASH (Fast Low Angle Shot)
+imaging sequences. To visualize fiber orientation in [the |each] heart, a
+diffusion-weighted MRI sequence was also performed [for each excised
+heart|]. Capitalizing on the combined advantages of both FISP (consistent
+volume boundaries) and FLASH sequences (high internal contrast), we
+produced [realistic <What does this word mean in this setting?  What is an
+`unrealistic' segmentation?>|] geometric segmentations of cardiac tissue,
+blood, and transmural plunge needle geometries using the Seg3D open-source
+software package (https://www.sci.utah.edu/software/seg3d).
 
 \subsection{Geometric Registration}
 
 %\subsubsection{Landmark Point Recordings}
 
-At the conclusion of each experiment, the locations of the linear torso surface electrode strips, preselected sock electrodes, transmural plunge needles on the cardiac surface were digitally recorded using a Microscribe three-dimensional digitizer (Solution Technologies, Oella, MD, USA). In addition, landmark sites including the location of the occlusion site, distribution of major epicardial coronary arteries, and the outline of the myocardial shape were also captured using the digitizer. Once the locations of the plunge needles were recorded, they were replaced with plastic spacers. 
+At the conclusion of each experiment, the locations of the [linear|] torso
+surface electrode strips, preselected sock electrodes, [transmural | and]
+plunge needle[s | insertion sites] on the cardiac surface were digitally
+recorded using a Microscribe three-dimensional digitizer (Solution
+Technologies, Oella, MD, USA). In addition, landmark sites including the
+location of the occlusion site, [distribution of|] major epicardial
+coronary arteries, and the outline of the myocardial shape were also
+captured using the digitizer. Once the locations of the plunge needles were
+recorded, they were replaced with plastic spacers.
 
 
 \subsection{Signal Processing and Data Visualization}
 
-The electrical signals recorded during the study were processed in Preprocessing Framework for Electrograms Intermittently Fiducialized from Experimental Recordings (PFEIFER) an open-source MATLAB-based signal processing platform designed to process bioelectric signals acquired from experiments that include recording electrodes placed in or around the heart or on the body surface. \cite{Rodenhauser2018} Using PFEIFER we were able to calibrate, baseline correct, filter, and mark specific time instances within cardiac signals for analysis.
+The electrical signals recorded during the study were processed in
+``Preprocessing Framework for Electrograms Intermittently Fiducialized from
+Experimental Recordings'' (PFEIFER) [|program] an open-source MATLAB-based
+signal processing platform designed to process bioelectric signals acquired
+from [|cardiac] experiments [that include recording electrodes placed in or
+around the heart or on the body surface|]. \cite{Rodenhauser2018} Using
+PFEIFER[|,] we were able to calibrate, baseline correct, filter, and mark
+specific time instances within cardiac signals for analysis.
 
-Finally the processed experimental data was mapped to the identified electrode locations within the heart, on the epicardial surface of the heart, and on the torso surface. Full experimental model datasets were then visualized using \mapthreed (https://www.sci.utah.edu/software/map3d) or SCIRun (https://www.sci.utah.edu/software/scirun) open-source software packages. These software packages and tools allowed for extensive spacial exploration of ischemia and hypothesis development. 
+Finally[|,] the processed experimental [data was|signal were] mapped to the
+identified electrode locations within the heart, on the epicardial surface
+of the heart, and on the torso surface. Full experimental model datasets
+were then visualized using \mapthreed
+(https://www.sci.utah.edu/software/map3d) or SCIRun
+(https://www.sci.utah.edu/software/scirun) open-source software
+packages[. These software packages and tools allowed |, which provided] for
+extensive [spacial|spatial] exploration of [ischemia and hypothesis
+development|the results].
 
 \section{Results}
 
-Our experimental model was able to simultaneously record from all three aforementioned regions with high resolution. These recordings were then accurately localized to the correct location on the animal geometry and visualized. Ischemic control was achieved and four transient episodes of ischemia were induced for each animal model.  
+[Our experimental model was| With this experimental preparation, we were]
+able to simultaneously record from all three aforementioned regions with
+high resolution[| and adequate coverage]. [These recordings were then
+accurately localized to the correct location on the animal geometry and
+visualized.|] Ischemic control was achieved and four transient episodes of
+ischemia were induced for each animal [model|<You make the same mistake as
+Brett.  An experimental model is the setup not the individual animal>].
 
-Our results show a difference in the region of ischemia created during the BRUCE and Dobutamine stress tests. During peak ischemic stress the region identified as ischemic from ST\%40 potentials was larger in the dobutamine experiments compared to the BRUCE protocol experiments. (Figure \ref{fig:myo}) These results propagated to the epicardial and body surface. (Figure \ref{fig:epitorso}).  
+[Our results show a | Figure \ref{fig:myo} shows one result to illustrate
+the] difference[|s] in the region of ischemia created during the BRUCE and
+Dobutamine stress tests. During peak ischemic stress[|,] the region
+identified as ischemic [from|based on elevated] ST\%40 potentials was
+larger [|in|following] the dobutamine [experiments|protocol] [compared
+to|than in] the BRUCE protocol [experiments|]. [(Figure \ref{fig:myo})|]
+[These results | Figure \ref{fig:epitorso} shows how these features also]
+propagated to the epicardial and body surface[|s with the expected loss of
+localization <We need to say something about this, not sure if these are
+the best words.>]. [(Figure \ref{fig:epitorso}).|]
 
 
 \begin{figure}
 	\centering
 	\includegraphics[width = .45\textwidth]{../Figures/1.png}
 	
-	\caption{ Regions of ischemia detected within the myocardium. Red hue represents larger ST\%40 values and Blue hue represents lower ST\%40 values. Row 1: Bruce protocol. Row 2: Dobutamine Protocol.}
+	\caption{Regions of ischemia detected within the myocardium.[ Red
+          hue represents larger ST\%40 values and Blue hue represents lower
+          ST\%40 values.|ST\%40 values are indicated by the color, as
+          indicated in the scale bar.  The dashed lines indicate the slice
+          levels captured in the adjacent projections.] Row 1: Bruce
+          protocol. Row 2: Dobutamine Protocol. [|The superior edge of each
+          slice corresponds to the anterior surface in the leftmost
+          column. ]}
 	\label{fig:myo}
 \end{figure}
 
@@ -134,17 +346,65 @@ Our results show a difference in the region of ischemia created during the BRUCE
 	\centering
 	\includegraphics[width = .45\textwidth]{../Figures/2.png}
 
-	\caption{Regions of ischemia detected on the epicardial surface and the torso surface. Red hue represents larger ST\%40 values and Blue hue represents lower ST\%40 values. Row 1: Epicardial and Torso measurements from a Bruce Protocol. Row 2: Epicardial and Torso Measurements from a dobutamine protocol.  }
+	\caption{Regions of ischemia detected on the epicardial surface and
+          the torso surface. [Red hue represents larger ST\%40 values and
+          Blue hue represents lower ST\%40 values.|Again, color indicates
+          amplitude of the local ST\%40 values] Row 1: Epicardial and
+          Torso measurements from a Bruce Protocol. Row 2: Epicardial and
+          Torso Measurements from a dobutamine protocol.  [|Results are
+          from the same cases as in Figure~\ref{fig:myo} <Is this true?  It
+          should be.>] }
 	\label{fig:epitorso}
 \end{figure}
 
 \section{Discussion}
 
-In this study, we proposed a novel experimental preparation to better characterize and understand the electrical signals of myocardial ischemia. In specific, we tested the hypothesis that different clinical cardiac stress tests cause different electrical signatures detectable on the body surface. Our results show that individual stress mechanisms via the BRUCE and dobutamine stress tests produce different amounts of ischemia with comparable heart rates. The characteristic electrical signals on the body surface were similar in overall pattern but different in amplitude. The dobutamine stress tests produced body surface signals with significant amounts of depression, while the BRUCE protocols produced a relatively mild depression. These findings suggest different stresses on the heart require unique diagnostic criteria to detect and monitor myocardial ischemia. This finding underscores a recurring theme that the process of ischemia detection and development is more complicated than conventional explanations have indicated. Previous studies similar to this have shown significant deviations from conventional clinical notions and metrics of myocardial ischemia. 
+In this study, we proposed a novel experimental preparation to [better|]
+characterize and understand the electrical signals of myocardial ischemia[|
+within the heart and on the epicardial and body surfaces]. In specific, we
+tested the hypothesis that different clinical cardiac stress tests cause
+different electrical signatures detectable on the body surface. Our results
+show that [individual stress mechanisms via|] the BRUCE and dobutamine
+stress tests produce different amounts [|and spatial distributions] of
+ischemia with comparable heart rates. [The characteristic electrical
+signals on the body surface were similar in overall pattern but different
+in amplitude.| The largest differences were visible within the myocardium,
+as shown in the number and locations of extrema in Figure~\ref{fig:myo}.
+Epicardial and torso surface differences were also visible but limited to
+amplitudes of shared features. ] The dobutamine stress tests produced body
+surface signals with significant amounts of depression, while the BRUCE
+protocols produced [a|only] relatively mild depression.
 
-Another important breakthrough in this study is the simultaneous recordings from within the heart, on the heart surface, and on the body surface during a controlled ischemic intervention. To date, no group has simultaneously recorded from each of these regions with such high resolution while inducing controlled myocardial ischemia. The datasets used in this study will be ideal test datasets for other methods of detecting ischemia including electrocardiographic imaging. The high resolution, ischemic control, and simultaneous recordings in multiple region make these datasets extremely valuable to the community at large. 
+[|<Now you are heading in a new direction so a separate paragraph seems
+necessary.>] These findings suggest different [stresses on |means of
+stressing] the heart require unique diagnostic criteria to detect and
+monitor myocardial ischemia. This finding underscores a recurring theme
+that the process of ischemia detection and development is more complicated
+than conventional explanations have indicated. [Previous studies similar to
+this have shown significant deviations from conventional clinical notions
+and metrics of myocardial ischemia.| <This is vague and needs a citation.
+I assume you mean something like the following:> Our previous results have
+already demonstrated that non-transmural ischemia arises from multiple
+regions with the myocardium and shows complex spatio-temporal
+progression.\cite{}]
 
-This project was limited by the relatively few experiments performed for each type of cardiac stressing. This study was also limited in clinical translation because of the animal torso shape and other anatomical features. Future directions of this project will include expanding the number of experiments performed with each different type of cardiac stressing. 
+Another important breakthrough in this study [is|was] the simultaneous
+recordings from within the heart, on the heart surface, and on the body
+surface during a controlled ischemic intervention. To date, [no group has
+simultaneously recorded from each of these regions with | we know of no
+published results documented ] such high resolution [while inducing
+controlled myocardial ischemia | with a similar protocol]. The datasets used
+in this study will be ideal test datasets for other methods of detecting
+ischemia, including electrocardiographic imaging. The high resolution,
+ischemic control, and simultaneous recordings in multiple region make these
+datasets extremely valuable to the community at large.
+
+This project was limited by the [relatively few|small number of]
+experiments performed [for each type of cardiac stressing | so far]. This
+study was also limited in [|direct] clinical translation because of the
+animal torso shape and other anatomical features. Future directions of this
+project will include [expanding the number of | more] experiments performed
+with [each different type of cardiac stressing | both stress protocols].
 
 
 \balance
@@ -155,7 +415,8 @@ This project was limited by the relatively few experiments performed for each ty
 % 
 Support for this research comes from the NIH NIGMS Center for Integrative
 Biomedical Computing (www.sci.utah.edu/cibc), NIH NIGMS grant
-no. P41GM103545 and the Nora Eccles Treadwell Foundation for Cardiovascular Research.
+no. P41GM103545 and the Nora Eccles Treadwell Foundation for Cardiovascular
+Research.
 
 
 % LateX generates the ``References'' heading automatically and switches
