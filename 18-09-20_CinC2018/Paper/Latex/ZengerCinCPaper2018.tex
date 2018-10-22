@@ -108,13 +108,8 @@ and measure electrical changes of the heart on the body surface via an
 ECG. Such tests assume that both mechanisms induce identical, or at least
 similar, forms of ischemia. However, no definitive experiments have been
 reported that assess the electrical effects produced during
-different stressing mechanisms. [Studies that have reported electrical
-findings for both stress types have shown different electrical morphologies
-of ischemia.|<This is a little vague and lacks a reference, which it really
-needs.] These contradictions indicate that the different cardiac stressing
-methods may not produce identical regions [|or types] of ischemia and
-substantiates a controlled examination of [the methods used to stress the
-heart|these methods].
+different stressing mechanisms. This lack of definitive study 
+substantiates a controlled examination of these different stressing methods.
 
 To date, no experimental model has provided accurate and comprehensive sampling of
 electrical signals from controlled ischemia within the myocardial
@@ -142,7 +137,7 @@ dobutamine infusion.
 \subsection{Animal Model} 
 
 Swine and canine animal models were selected for this experimental
-preparation[. Both species were chosen|] because of their similar cardiac
+preparation because of their similar cardiac
 anatomy, electrical system, and vascular structure to humans. The animals
 of each species were 25--35 kg in weight and 8 months to
 several years of age. The animals were purpose bred for the use
@@ -151,8 +146,7 @@ Institutional Animal Care and Use Committee at the University of Utah and
 conformed to the Guide for Care and Use of Laboratory Animals. After 12
 hours of fasting, the animals were sedated using an intravenous propofol
 bolus of 5--8~mg/kg in canines or a mixture of Telazol
-(4.4~mg/kg), Ketamine (2.2~mg/kg), and Xylazine (2.2~mg/kg) in swine
-[through intravenous access|] and then intubated. Once intubated,
+(4.4~mg/kg), Ketamine (2.2~mg/kg), and Xylazine (2.2~mg/kg) in swine and then intubated. Once intubated,
 isoflurane gas (1-5\%) was used for anesthesia. At the end of the
 experiment animals were euthanized while under general anesthesia, with
 intravenous Beuthanasia 1~ml/10~kg. The heart was then removed for further
@@ -249,12 +243,12 @@ software package (https://www.sci.utah.edu/software/seg3d).
 
 %\subsubsection{Landmark Point Recordings}
 
-At the conclusion of each experiment, the locations of the [linear|] torso
-surface electrode strips, preselected sock electrodes, [transmural | and]
-plunge needle[s | insertion sites] on the cardiac surface were digitally
+At the conclusion of each experiment, the locations of the linear torso
+surface electrode strips, preselected sock electrodes, and
+plunge needle insertion sites on the cardiac surface were digitally
 recorded using a Microscribe three-dimensional digitizer (Solution
 Technologies, Oella, MD, USA). In addition, landmark sites including the
-location of the occlusion site, [distribution of|] major epicardial
+location of the occlusion site, major epicardial
 coronary arteries, and the outline of the myocardial shape were also
 captured using the digitizer. Once the locations of the plunge needles were
 recorded, they were replaced with plastic spacers.
@@ -264,57 +258,47 @@ recorded, they were replaced with plastic spacers.
 
 The electrical signals recorded during the study were processed in
 ``Preprocessing Framework for Electrograms Intermittently Fiducialized from
-Experimental Recordings'' (PFEIFER) [|program] an open-source MATLAB-based
+Experimental Recordings'' (PFEIFER) program an open-source MATLAB-based
 signal processing platform designed to process bioelectric signals acquired
-from [|cardiac] experiments [that include recording electrodes placed in or
-around the heart or on the body surface|]. \cite{Rodenhauser2018} Using
-PFEIFER[|,] we were able to calibrate, baseline correct, filter, and mark
+from cardiac experiments. \cite{Rodenhauser2018} Using
+PFEIFER, we were able to calibrate, baseline correct, filter, and mark
 specific time instances within cardiac signals for analysis.
 
-Finally[|,] the processed experimental [data was|signal were] mapped to the
+Finally, the processed experimental signals were mapped to the
 identified electrode locations within the heart, on the epicardial surface
 of the heart, and on the torso surface. Full experimental model datasets
 were then visualized using \mapthreed
 (https://www.sci.utah.edu/software/map3d) or SCIRun
 (https://www.sci.utah.edu/software/scirun) open-source software
-packages[. These software packages and tools allowed |, which provided] for
-extensive [spacial|spatial] exploration of [ischemia and hypothesis
-development|the results].
+packages which provided for
+extensive spatial exploration of the results.
 
 \section{Results}
 
-[Our experimental model was| With this experimental preparation, we were]
+With this experimental preparation, we were
 able to simultaneously record from all three aforementioned regions with
-high resolution[| and adequate coverage]. [These recordings were then
-accurately localized to the correct location on the animal geometry and
-visualized.|] Ischemic control was achieved and four transient episodes of
-ischemia were induced for each animal [model|<You make the same mistake as
-Brett.  An experimental model is the setup not the individual animal>].
+high resolution and adequate coverage. Ischemic control was achieved and four transient episodes of
+ischemia were induced for each animal.
 
-[Our results show a | Figure \ref{fig:myo} shows one result to illustrate
-the] difference[|s] in the region of ischemia created during the BRUCE and
-Dobutamine stress tests. During peak ischemic stress[|,] the region
-identified as ischemic [from|based on elevated] ST\%40 potentials was
-larger [|in|following] the dobutamine [experiments|protocol] [compared
-to|than in] the BRUCE protocol [experiments|]. [(Figure \ref{fig:myo})|]
-[These results | Figure \ref{fig:epitorso} shows how these features also]
-propagated to the epicardial and body surface[|s with the expected loss of
-localization <We need to say something about this, not sure if these are
-the best words.>]. [(Figure \ref{fig:epitorso}).|]
+Figure \ref{fig:myo} shows one result to illustrate
+the differences in the region of ischemia created during the BRUCE and
+Dobutamine stress tests. During peak ischemic stress, the region
+identified as ischemic based on elevated ST\%40 potentials was
+larger following the dobutamine protocol than in the BRUCE protocol. 
+Figure \ref{fig:epitorso} shows how these features also
+propagated to the epicardial and body surfaces with the expected loss of
+localization.
 
 
 \begin{figure}
 	\centering
 	\includegraphics[width = .45\textwidth]{../Figures/1.png}
 	
-	\caption{Regions of ischemia detected within the myocardium.[ Red
-          hue represents larger ST\%40 values and Blue hue represents lower
-          ST\%40 values.|ST\%40 values are indicated by the color, as
-          indicated in the scale bar.  The dashed lines indicate the slice
-          levels captured in the adjacent projections.] Row 1: Bruce
-          protocol. Row 2: Dobutamine Protocol. [|The superior edge of each
+	\caption{Regions of ischemia detected within the myocardium. ST\%40 values are indicated by the color, as shown in the scale bar. The dashed lines indicate the slice
+          levels captured in the adjacent projections. Row 1: Bruce
+          protocol. Row 2: Dobutamine Protocol. The superior edge of each
           slice corresponds to the anterior surface in the leftmost
-          column. ]}
+          column.}
 	\label{fig:myo}
 \end{figure}
 
@@ -323,64 +307,54 @@ the best words.>]. [(Figure \ref{fig:epitorso}).|]
 	\includegraphics[width = .45\textwidth]{../Figures/2.png}
 
 	\caption{Regions of ischemia detected on the epicardial surface and
-          the torso surface. [Red hue represents larger ST\%40 values and
-          Blue hue represents lower ST\%40 values.|Again, color indicates
-          amplitude of the local ST\%40 values] Row 1: Epicardial and
+          the torso surface. Again, color indicates
+          amplitude of the local ST\%40 values Row 1: Epicardial and
           Torso measurements from a Bruce Protocol. Row 2: Epicardial and
-          Torso Measurements from a dobutamine protocol.  [|Results are
-          from the same cases as in Figure~\ref{fig:myo} <Is this true?  It
-          should be.>] }
+          Torso Measurements from a dobutamine protocol.  Results are
+          from the same cases as in Figure~\ref{fig:myo}}
 	\label{fig:epitorso}
 \end{figure}
 
 \section{Discussion}
 
-In this study, we proposed a novel experimental preparation to [better|]
-characterize and understand the electrical signals of myocardial ischemia[|
-within the heart and on the epicardial and body surfaces]. In specific, we
+In this study, we proposed a novel experimental preparation to
+characterize and understand the electrical signals of myocardial ischemia
+within the heart and on the epicardial and body surfaces. In specific, we
 tested the hypothesis that different clinical cardiac stress tests cause
 different electrical signatures detectable on the body surface. Our results
-show that [individual stress mechanisms via|] the BRUCE and dobutamine
-stress tests produce different amounts [|and spatial distributions] of
-ischemia with comparable heart rates. [The characteristic electrical
-signals on the body surface were similar in overall pattern but different
-in amplitude.| The largest differences were visible within the myocardium,
+show that  the BRUCE and dobutamine
+stress tests produce different amounts and spatial distributions of
+ischemia with comparable heart rates. The largest differences were visible within the myocardium,
 as shown in the number and locations of extrema in Figure~\ref{fig:myo}.
 Epicardial and torso surface differences were also visible but limited to
-amplitudes of shared features. ] The dobutamine stress tests produced body
+amplitudes of shared features. The dobutamine stress tests produced body
 surface signals with significant amounts of depression, while the BRUCE
-protocols produced [a|only] relatively mild depression.
+protocols produced only relatively mild depression.
 
-[|<Now you are heading in a new direction so a separate paragraph seems
-necessary.>] These findings suggest different [stresses on |means of
-stressing] the heart require unique diagnostic criteria to detect and
+These findings suggest different means of
+stressing the heart require unique diagnostic criteria to detect and
 monitor myocardial ischemia. This finding underscores a recurring theme
 that the process of ischemia detection and development is more complicated
-than conventional explanations have indicated. [Previous studies similar to
-this have shown significant deviations from conventional clinical notions
-and metrics of myocardial ischemia.| <This is vague and needs a citation.
-I assume you mean something like the following:> Our previous results have
+than conventional explanations have indicated. Our previous results have
 already demonstrated that non-transmural ischemia arises from multiple
 regions with the myocardium and shows complex spatio-temporal
-progression.\cite{}]
+progression.\cite{Aras2016}
 
-Another important breakthrough in this study [is|was] the simultaneous
+Another important breakthrough in this study was the simultaneous
 recordings from within the heart, on the heart surface, and on the body
-surface during a controlled ischemic intervention. To date, [no group has
-simultaneously recorded from each of these regions with | we know of no
-published results documented ] such high resolution [while inducing
-controlled myocardial ischemia | with a similar protocol]. The datasets used
+surface during a controlled ischemic intervention. To date, we know of no
+published results documenting such high resolution with a similar protocol. The datasets used
 in this study will be ideal test datasets for other methods of detecting
 ischemia, including electrocardiographic imaging. The high resolution,
 ischemic control, and simultaneous recordings in multiple region make these
 datasets extremely valuable to the community at large.
 
-This project was limited by the [relatively few|small number of]
-experiments performed [for each type of cardiac stressing | so far]. This
-study was also limited in [|direct] clinical translation because of the
+This project was limited by the small number of
+experiments performed so far. This
+study was also limited in direct clinical translation because of the
 animal torso shape and other anatomical features. Future directions of this
-project will include [expanding the number of | more] experiments performed
-with [each different type of cardiac stressing | both stress protocols].
+project will include more experiments performed
+with both stress protocols.
 
 
 \balance
