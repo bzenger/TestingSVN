@@ -1,0 +1,156 @@
+
+% -*-latex-*-
+% Document name: proposal.tex, a template for the PhD Proposal
+%
+% Authors: Rob MacLeod 
+% 
+% Last update: Mon Jan 30 07:10:25 2012 by Rob Macleod
+%    - created
+% Last update: Wed Oct 24 08:50:29 2012 by Rob Macleod
+%    - updated for BE 6060 Fall 2012 Edition
+% Last update: Tue Sep 22 21:30:10 2015 by Rob
+%    - updated for the 2015 edition of the course
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{report}
+% Read the nih-proposal.sty file to see what this package does to set up
+% the document.
+\usepackage{nih-proposal}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[compact]{titlesec}
+%\titlespacing{\section}{0pt}{*0}{*0}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+% These are handy commands you can use to create consistent and correct
+% special characters, units, and expressions.
+\newcommand{\etal}{{\em et al.}}
+\newcommand{\etc}{{\em etc.}}
+\newcommand{\eg}{{\em e.g.,}}
+\newcommand{\ie}{{\em i.e.,}}
+\newcommand{\cpp}{C{\raisebox{0.5ex}{\tiny++}}}
+\newcommand{\degrees}{{$^{\circ}$}}
+\newcommand{\muv}{${\rm \mu V}$}
+\newcommand{\ohm}{$\Omega$}
+\newcommand{\sft}{${\rm ft^2}$}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{tabu}
+
+\hypersetup{%
+	colorlinks=true,% hyperlinks will be coloured
+	urlcolor=black,
+	linkcolor=black,
+	citecolor = black,
+	breaklinks=true
+	%linkcolor=green,% hyperlink text will be green
+	%linkbordercolor=red,% hyperlink border will be red
+}
+\usepackage{adjustbox}
+\usepackage{soul}
+\urlstyle{same}
+%\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Everything above here has to be setup; below here is the actual content.
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 1) Title
+\thispagestyle{empty}  % Keep this page blank expect for your title
+\input{title}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%% 2) Table of Contents
+% An automatic table of contents generator
+\tableofcontents
+\newpage
+
+\section{Abstract} 
+\input{abstract}
+\newpage
+
+\section{Narrative}
+\input{narrative}
+\newpage
+
+%\section{References} 
+
+%\bibliography{/Users/zenger/Documents/library.bib,/Users/zenger/GoogleDrive/_MDPhD/PhD/Writing/sci-bibtex/biglit.bib,/Users/zenger/GoogleDrive/_MDPhD/PhD/Writing/sci-bibtex/bmb.bib,/Users/zenger/GoogleDrive/_MDPhD/PhD/Writing/sci-bibtex/kka.bib,/Users/zenger/GoogleDrive/_MDPhD/PhD/Writing/sci-bibtex/blz.bib} 
+\bibliography{strings,biglit,kka,blz,bmb}
+\bibliographystyle{ieeetr}
+\newpage
+
+\section{Facilities and Other Resources} 
+\input{facilities}
+\newpage
+
+\section{Equipment}
+\input{equipment}
+\newpage
+
+%\section{Biosketch Brian Zenger}
+\input{biosketchBrian}
+\newpage
+
+%\section{Biosketch Rob MacLeod} 
+% \input{biosketchRob}
+\includepdf[pages={-},pagecommand={}, offset= 5 0, scale= 1.00]
+{biosketchRob.pdf}
+
+\newpage
+
+%\section{Biosketch Ravi Ranjan}
+\includepdf[pages={-},pagecommand={}, offset= 5 0, scale= 1.00]
+{BiosketchRanjan.pdf}
+\newpage
+
+%\section{Applicants Background and Goals for Fellowship Training}
+\input{applicantsBackground}
+\newpage
+
+%%%%%%%%%%%%%%%%%%% 1. Specific Aims Page
+\input{aims}
+\newpage 
+
+\section{Research Strategy}
+\input{significance}
+\input{innovation}
+\input{approach}
+\newpage
+
+\section{Respective Contributions}
+\input{respective_contributions}
+\newpage
+
+\section{Selection of Institution}
+\input{institution_selection}
+\newpage
+
+\section{Training in Responsible Conduct of Research}
+\input{responsible_conduct_of_research}
+\newpage
+
+\section{Sponsor and Co-Sponsor Statements}
+\input{sponsor_cosponsor_statements}
+\newpage
+
+\section{Description of Institutional Environment and Training} 
+\input{commitment_to_training}
+\newpage
+
+\section{Vertebrate Animals}
+\input{vertebrate_animal}
+\newpage
+
+\section{Data Sharing Plan}
+\input{datasharing}
+\newpage
+
+
+\end{document}
+
+
+

@@ -1,0 +1,166 @@
+% File: nih-proposal.sty
+%
+% A file with some style features for writing a proposal in NIH format
+% \Latex{}.
+% Note: this works best for the paper version of the proposal.  See 
+% elsewhere for templates for electronic versions
+%
+% Things included in the file are:
+%
+% Headings: the NIH has these nifty forms they like for grants and this
+%          style files makes 'em for you.
+% Bibliography: the standard hading for the bibliography is changed here to
+%          read ``cited references'' and be marked with a section number
+%          (section 9 in a standard grant application.)
+% Caption spacing: there is a problem in \Latex{} when centering figures
+%          above the caption and Nelson Beebe seems to have figured out
+%          a work around.  It involves redefining the \caption command
+%          to remove the 10pt of slace that is always added between the
+%          caption and the box that the figure environment puts things in.
+%
+% To use this, set your document style to something like this:
+%
+% \documentstyle[11pt]{article}
+% \usepackage{nih-proposal}
+% \usepackage{graphicx}
+% \usepackage{wrapfig}
+%
+% Last update: Mon Jan 30 07:14:54 2012 by Rob Macleod
+%    - created for BIOEN 6061 class
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Packages and overall fonts/look/feel
+\usepackage[super]{cite}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{times}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Page format stuff
+\textheight 9.6in
+\textwidth 7.4in
+\topmargin -.70in
+\oddsidemargin -0.45in
+\pagestyle{empty}
+\headsep .08in
+\headsep .24in
+\footskip 25pt
+\headheight 15pt
+%\renewcommand{\sectionmark}[1]{\markboth{\thesection\ #1}{\thesection\ #1}}
+%\renewcommand{\sectionmark}[1]{\markboth{\thechapter\ #1}{\thechapter\ #1}}
+%\rhead{{\small\sf PI: 
+%\underline{\hspace{.1in}Johnson, C.R.
+%\hspace{.05in}}}}
+%\lhead{\footnotesize \sf Program Director/Principal Investigator:
+ % \hspace{1em} Brian Zenger}
+%\lhead{\leftmark}
+%\rhead{\rightmark}
+%\lfoot{{\footnotesize\sf PHS 398/2590 (Rev. 06/09)}}
+%\cfoot{{\footnotesize \sf Page  \underline{\hspace{1em}\thepage\hspace{1em}}}}
+%\rfoot{}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+%\footrulewidth .8pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Setting to control figure placement
+% These determine the rules used to place floating objects like figures 
+% They are only guides, but read the manual to see the effect of each.
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.9}
+\renewcommand{\textfraction}{.1}
+
+%%%%%%%%%%%%%%%% Make a new caption command to fix spacing problems
+% This removes 10pt of spacing between caption and figure contents.
+%%%%
+\let \oldcaption = \caption
+\def\caption{\vskip 0pt \oldcaption}
+
+%% Make a new bibliography heading, with a different text and a section
+%  number.
+
+\def\thebibliography#1{\chapter{Cited References}\list
+ {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+ \advance\leftmargin\labelsep
+ \usecounter{enumi}}
+% \def\newblock{\hskip .11em plus .33em minus .07em}%
+ \def\newblock{\hskip .07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+% Standard for Report is to include chapter number in the figure
+% but we don't want chapter number to appear anywhere and replace
+% the figure naming convention with something more suitable
+\renewcommand \thefigure
+     {\ifnum \c@section>\z@ \thesection.\fi \@arabic\c@figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Line spacing
+% Use this command for ``double'' spacing
+%\setlength{\baselineskip}{1.2\baselineskip}
+% and this one for an acceptable NIH spacing of 6lpi based on 11pt
+%\setlength{\baselineskip}{.9\baselineskip}
+% The baselineskip does not appear to work when we include a maketitle
+% command in the main file.  Something there must set the line spacing
+% If we use this next command, then things seem to work.
+\renewcommand{\baselinestretch}{.9}
+
+%%%%%%%%%%%%%%%%%%%%%%% Paragraph spacing
+% This sets the spacing between paragraphs
+\setlength{\parskip}{\smallskipamount} 
+
+%%%%%%%%%%%%%%%%%%%%%%% Define how section numbers are formatted
+\renewcommand{\thechapter}{}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%% Figspace command
+% This one makes space for a figure but marks it as missing
+
+\newcommand{\figspace}[1]{\fbox{\parbox[c][3in]{\columnwidth}
+  {\centerline{Space for #1}}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% Redefine the standard chapter formatting
+\def\@makechapterhead#1{ \vspace*{50pt} { \parindent 0pt \raggedright 
+ \ifnum \c@secnumdepth >\m@ne 
+ \huge\bf \thechapter \hskip 1ex \fi #1\par 
+ \nobreak \vskip 40pt } }
+% \huge\bf \@chapapp{} \thechapter \par 
+% \vskip 20pt \fi \Huge \bf #1\par 
+% \nobreak \vskip 40pt } }
+
+\def\@makeschapterhead#1{ \vspace*{50pt} { \parindent 0pt \raggedright 
+\Huge \bf #1\par 
+ \nobreak \vskip 40pt } }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% New lists
+% Make up some new lists for doing enumerate and itemize which close down
+% the spacings between items in the list.
+% enumerate --> numlist
+% itemize --> itemlist
+% Note: adjust the values of \itemsep and \parsep to determine spacing.
+% Negative numbers are permitted and usually it looks best to have both
+% values equal 
+%%%%
+\newenvironment{numlist}
+  {\begin{enumerate}%
+  \setlength{\itemsep}{-1pt}%
+  \setlength{\parsep}{-5pt}}%
+  {\end{enumerate}}
+\newenvironment{itemlist}
+  {\begin{itemize}%
+  \setlength{\itemsep}{-5pt}%
+  \setlength{\parsep}{-5pt}}%
+  {\end{itemize}}
+\newenvironment{desclist}
+  {\begin{description}%
+  \setlength{\itemsep}{-5pt}%
+  \setlength{\parsep}{-5pt}}%
+  {\end{description}}
+

@@ -1,0 +1,102 @@
+% Filename: spacing.tex
+% Author: Rob MacLeod
+%
+%%%%%%%%%%%%%%%%%%%%%%% Spacing and section commands
+% This is just some space saving stuff to reduce the huge spaces that are
+% added between setions and items in a list.
+% Last update: Thu Apr  1 00:04:50 1999 by Rob MacLeod
+%    - documented for Quan's use
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% Change to spacing before the different sections
+
+%% Paragraph
+
+\renewcommand{\paragraph}{\@startsection
+{paragraph}%
+{4}%
+{\z@}%
+% Spacing before the heading line
+{-1ex}%
+% Spacing after the heading line (use negative value for heading and
+% first line of text on the same line.
+{-1ex}%
+{\normalsize\bf}}%
+
+%% Now the space around subsubsection.
+
+\renewcommand{\subsubsection}{\@startsection
+  {subsubsection}%
+  {3}%
+  {\z@}%
+% Spacing before the heading line
+  {-1ex}%
+% Spacing after the heading line
+  {1ex}%
+  {\normalsize\bf}}%
+
+%% And while we are at it,  around subsections.
+
+\renewcommand{\subsection}{\@startsection
+  {subsection}%
+  {2}%
+  {\z@}%
+% Spacing before the heading line
+  {1ex}%
+% Spacing after the heading line
+  {2ex}%
+  {\large\bf}}%
+
+%% To be complete, we do section as well.
+
+\renewcommand{\section}{\@startsection
+  {section}%
+  {1}%
+  {\z@}%
+% Spacing before the heading line
+  {-1.5ex \@plus -1ex \@minus -.2ex}%
+% Spacing after the heading line
+  {1ex \@plus.2ex}%
+  {\Large\bf}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% New lists
+% Make up some new lists for doing enumerate and itemize which close down
+% the spacings between items in the list.
+% enumerate --> numlist
+% itemize --> itemlist
+% Note: adjust the values of \itemsep and \parsep to determine spacing.
+% Negative numbers are permitted and usually it looks best to have both
+% values equal 
+%%%%
+\newenvironment{numlist}
+  {\begin{enumerate}%
+  \setlength{\itemsep}{-1pt}%
+  \setlength{\parsep}{-5pt}}%
+  {\end{enumerate}}
+\newenvironment{itemlist}
+  {\begin{itemize}%
+  \setlength{\itemsep}{-5pt}%
+  \setlength{\parsep}{-5pt}}%
+  {\end{itemize}}
+\newenvironment{desclist}
+  {\begin{description}%
+  \setlength{\itemsep}{-5pt}%
+  \setlength{\parsep}{-5pt}}%
+  {\end{description}}
+
+% Make a new list environment for indented descriptions
+%
+\newenvironment{indentdesc}{\begin{list}{}{%
+\addtolength{\leftmargin}{8ex}
+\setlength{\parsep}{0.3ex plus 0.2ex minus0.2ex}
+%\setlength{\parsep}{0.5ex plus 0.2ex minus0.2ex}
+%\setlength{\itemsep}{0.3ex}
+\setlength{\itemsep}{0.2ex}
+\setlength{\labelsep}{2ex}
+\setlength{\labelwidth}{5ex}
+\setlength{\itemindent}{0ex}
+\renewcommand{\makelabel}[1]{\bfseries{##1\hfill}}}}
+{\end{list}}
+
+
+
