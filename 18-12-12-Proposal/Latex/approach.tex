@@ -159,7 +159,7 @@ To control for other potential confounding variables between experiments we will
 
 Several studies have demonstrated differences in performance between exercise and dobutamine stress tests using a variety of markers.  From an anatomical point of view, the ischemic zones created should not be different. However, with complex physiology, possible drug binding to other receptors, and many other confounding factors, the possibility for differences cannot be ruled out. If the ischemic zones created are different, ischemia detection methods may have to be tailored to the cardiac stress type, or at the very least, physicians should be informed of the possible differences between the ischemic zones created by each mechanism.  
 
-\paragraph{Experimental Design} Using the experimental system described above, we will compare rapid pacing (simulating exercise) and dobutamine infusion for their ability to create ischemia. Our proof of concept results suggest we can carry out both stresses in the same animal and that they may produce different results.  To simulate exercise stress, we will first determine the resting heart rate and apply stepwise increase as per the Bruce exercise stress protocol (6--8 steps at 3-minute duration).\cite{BLZ:Oki1986} Pharmacological stress will occur by infusions at 5--40 ug/kg/min per the dobutamine protocol (6--8 steps at 3-minute duration).\cite{BLZ:SAL1992} Recovery between repeated episodes will last 30 minutes. Vascular occlusion will be held constant for each intervention. To reduce order dependencies, we will vary the pattern of interventions. We will compare relative differences between ischemic zones induced within experiments to control for vasculature and other physiological variability.
+\paragraph{Experimental Design} Using the experimental system described above, we will compare rapid pacing (simulating exercise) and dobutamine infusion for their ability to create ischemia. Our proof of concept results suggest we can carry out both stresses in the same animal and that they may produce different results.  To simulate exercise stress, we will first determine the resting heart rate and apply stepwise increase as per the Bruce exercise stress protocol (6--8 steps at 3-minute duration).\cite{BLZ:Oki1986} Pharmacological stress will occur by infusions at 5--40 ug/kg/min per the dobutamine protocol (6--8 steps at 3-minute duration).\cite{BLZ:SAL1992} Recovery between repeated episodes will last 30 minutes. Vascular occlusion will be held constant for each intervention. To reduce order dependencies, we will vary the pattern of interventions. We will compare relative differences between ischemic zones induced within experiments to control for vasculature and other physiological variability. The occlusion percentage will be set and stay consistent across each ischemia intervention during the experiment. To determine the occlusion percentage we will incrementally increase the calibrated occlusion percentage of the vessel from 50-90\% in 10\% intervals while the animal is paced at the maximum pacing rate. At each increment the heart will be given time to adjust, and any instabilities will be noted. The presence of 3 or more sequential premature ventricular contractions will indicate that the maximum occlusion percentage has been reached for this particular experimental animal. This will be the set occlusion percentage used throughout the experiment during ishcemic interventions. 
 
 
 \begin{figure}[htb]%{\textwidth}
@@ -178,20 +178,12 @@ Several studies have demonstrated differences in performance between exercise an
 \end{figure}
 
 
-Data analysis will consist of comparing the extent and the characteristics
-of the ischemic regions over time that arise from these two different
-stress interventions. First, the ST40\% value across the entire region of
-perfusion will be compared using Pearson's correlation coefficient and
-relative error approximations. Next, thresholds to the ST40\% values
-measured will be applied at multiple time points within the ischemic
-intervention, which will create distinct volumes of ischemia. Both the
-three-dimensional volume and location of the ischemic zones will be
-compared using Dice overlap coefficients and statistical shape analysis.
+Data analysis will consist of comparing the extent and the characteristics of the ischemic regions over time that arise from the two different stress interventions. The relevant time points within the signals for this study are the ST40\%, J point plus 60 milliseconds, and T-wave peak. The ST40\% is calculated by taking identifying the voltage at 40\% of the ST segment time. The J point plus 60 milliseconds is the voltage of the signal at 60 milliseconds from the end of the QRS complex. The T-wave peak is the voltage of the signal at the T-peak time instance as identified on the root mean squared curve of all the recorded signals. Each of these metrics will be evaluated for differences between the two cardiac stress mechanisms. First, the ST40\% value across the entire region of perfusion will be compared using Pearson's correlation coefficient and relative error approximations. Next, thresholds to the ST40\% values measured will be applied at multiple time points within the ischemic intervention, which will create distinct volumes of ischemia. Both the three-dimensional volume and location of the ischemic zones will be compared using Dice overlap coefficients and statistical shape analysis. This analysis will be repeated for J point plus 60 milliseconds and T-wave peak voltages. 
 
 \paragraph{Expected Results} Based in preliminary results, we expect some
 variation to arise between the two stress mechanisms.  We will use the Dice
 coefficient to test our null hypothesis (greater than 80\% overlap), and
-compare the raw values of ST40\% via Pearson's correlation
+compare the raw values of each proposed clinical metric via Pearson's correlation
 coefficient above 0.80. Agreement in both of these metrics would
 substantiate the hypothesis that the ischemic region created during
 different stress tests is identical. With identical occlusion amounts and
