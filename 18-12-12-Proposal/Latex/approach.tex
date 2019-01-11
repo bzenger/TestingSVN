@@ -3,14 +3,12 @@
 % Creator: Rob MacLeod [macleod@cvrti.utah.edu]
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Research Approach}
+\section{Research Approach}
 \label{sec:appr}
 
-\subsubsection{Aim 1: Refine an animal model of ischemia to measure electrical potentials within the myocardium, on the heart surface, and on the body surface during controlled ischemic stress }
-%\paragraph{Introduction:}
-% We will address the lack of adequate
-% experimental model to validate electrocardiographic methods
-% that characterize and detect acute myocardial ischemia.
+\subsection{Aim 1: Refine an animal model of ischemia to measure electrical potentials within the myocardium, on the heart surface, and on the body surface during controlled ischemic stress }
+\paragraph{Introduction:}
+ We will address the lack of adequate experimental model to validate electrocardiographic methods that characterize and detect acute myocardial ischemia.
 We will refine an existing model we have developed
 \cite{RSM:Ara2016,BLZ:Zen2018a} that will allow us to record
 the electrical activity within the myocardium, on the heart surface, and on
@@ -30,24 +28,7 @@ their kind and will be shared openly with the research community, enabling
  thus understand unique disease mechanisms, improve diagnosis, and validate
  treatment techniques.
 
-\begin{wrapfloat}{figure}{r}{0.5\textwidth}
-    % \begin{figure}[htb]
-    %     \intextsep{0pt}
-    %     \columnsep{3pt}
-    \vspace{-.3in}
-    \begin{center}
-        {\includegraphics[width=0.5\textwidth]
-          {../Figures/fig1.png}}
-        \captionsetup{width = 0.5\textwidth}
-        \caption{\small \label{fig:prep} Experimental preparation
-          components. A. Needle electrode array B. Sock electrode array
-          C. Torso surface recordings D. Needle and sock electrodes
-          registered on heart geometry with approximate vascular occluder
-          location E. Heart and torso surface registered.}
-    \end{center}
-    \vspace{-.4in}
-    % \end{figure}
-\end{wrapfloat}
+
 
 \paragraph{Justification and Feasibility} The justification for this aim
 stems from the need for high-resolution electrical recordings of the heart
@@ -93,16 +74,33 @@ the recording equipment. \textbf{For both aspects, we have preliminary
   form.}\cite{BLZ:Zen2018a} In two animal experiments, we closed the chest
 following placement of recording and ischemic control equipment. We were
 then able to map the electrical potentials during peak ischemic load on the
-heart.
-
-% Thus, the experiments proposed here are justified as the only means
-% to explore and validate means to diagnose and localize acute ischemia and
-% feasible based on previous results from the literature and our group.
+heart. Thus, the experiments proposed here are justified as the only means
+ to explore and validate means to diagnose and localize acute ischemia and
+ feasible based on previous results from the literature and our group.
 
 
+\begin{wrapfloat}{figure}{r}{0.7\textwidth}
+	% \begin{figure}[htb]
+	%     \intextsep{0pt}
+	%     \columnsep{3pt}
+%	\vspace{-.3in}
+	\begin{center}
+		{\includegraphics[width=0.7\textwidth]
+			{../Figures/fig1.png}}
+		\captionsetup{width = 0.7\textwidth}
+		\caption{\small \label{fig:prep} Experimental preparation
+			components. A. Needle electrode array B. Sock electrode array
+			C. Torso surface recordings D. Needle and sock electrodes
+			registered on heart geometry with approximate vascular occluder
+			location E. Heart and torso surface registered.}
+	\end{center}
+%	\vspace{-.4in}
+	% \end{figure}
+\end{wrapfloat}
 
+\paragraph{Experimental Design}
 
-\paragraph{Experimental Design} \textit{Technical goal 1: To obtain ischemic load
+ \textit{Technical goal 1: To obtain ischemic load
   control.} To create cardiac stress, we will modify regional perfusion and
 myocardial stress independently. To decrease the perfusion, we will place a
 calibrated hydraulic vascular occluder (Precision Technologies) around the
@@ -120,10 +118,7 @@ we will capture control recordings. To test if cardiac ischemia was
 induced, we will visualize ST40\% potential values from continuous
 recordings before, during, and after each ischemic episode. Each animal
 will serve as its own control and will have several replicates of identical
-ischemic protocols to ensure accurate and consistent data.
-% For this
-% technical goal, we expect to have complete control of the metabolic supply
-% and demand of the heart during an ischemic episode.
+ischemic protocols to ensure accurate and consistent data. For this technical goal, we expect to have complete control of the metabolic supply and demand of the heart during an ischemic episode.
 
 \textit{Technical goal 2: To simultaneously record epicardial and
   transmural electric potentials from the myocardium.} To record epicardial
@@ -139,108 +134,37 @@ minimize air leaks and reestablish an intact thorax. After the chest
 closure, approximately 70--120 body-surface electrodes mounted in vertical
 strips (depending on animal size) will be attached to the skin.
 
-Signal acquisition will occur with an existing custom multiplexer capable
-of sampling up to 1024 channels at 1~kHz frequency.   Following each experiment, the electrode locations will be
-identified via MRI imaging and other validated registration
-techniques.\cite{BLZ:Zen2018a} All resulting electrograms will be processed
-using our custom, open-source software.\cite{RSM:Rod2018}
+Signals will be acquired using an existing custom multiplexer capable of sampling up to 1024 channels at 1~kHz frequency. Following each experiment, the electrode locations will be identified via MRI imaging and other validated registration techniques.\cite{BLZ:Zen2018a} In short, the electrode locations are determined by a combination of in-vivo cardiac MRI images, digitized landmark points, and high resolution ex-vivo cardiac MRIs. The coronary vasculature is identified using high-resolution micro-computed tomography images with BriteVue contrast agent injected into the coronary vasculature (Scarlet Imaging, SLC, UT, USA). The geometric models will be created using an open source software pipeline including our open-source software packages Seg3D2, Cleaver, and SciRun. All recorded electrograms will be processed using our custom, open-source software PFEIFER.\cite{RSM:Rod2018} Using PFEIFER, the recorded signals are calibrated, baseline corrected, filtered, and marked at specific time instances for further analysis. Each individual signal is calibrated by acquiring a reference sine wave of set amplitude(s) recorded prior to the experiment. These acquired signals are then used to extract a correction factor to be applied to all the recorded signals, resulting in a gain adjustment. A linear baseline drift correction is applied by selecting two assumed isoelectric points at the beginning and end of an electrical signal. Poor-quality signals from sock, needle, and torso electrodes are also discarded. Signals recorded from needle electrodes that do not have an initial positive wave deflection are identified as electrodes within the blood pool of the ventricles and are also discarded. The global root mean squared (RMS) signal is computed from all the sock, transmural plunge needle, and torso surface electrodes and then used to identify unique markings within the cardiac signal. The markings identified are the QRS waveform, T waveform, and peak of the T waveform. From these points, features such as ST40\%, QT-interval, and QRS amplitude are extracted from the cardiac signals. Algorithms also automatically extracted the activation and recovery times from the potentials at each electrode. PEFEIFER also can apply template fiducial points marked in one portion of the signal to the entire signal, which greatly reduces user input and signal processing time for each experiment.  
 
 
-\paragraph{Expected Results} We expect to achieve an experimental model in
-which we can reproducibly control the ischemic stress on the heart and
-simultaneously record myocardial electrical potentials from within the
-myocardium in and around the perfusion bed affected by
-occlusion, 360-degree coverage of the epicardial surface, and on the body surface.  For this
-model to be considered valid, it must induce transient episodes of
-myocardial ischemia within the heart, returning to baseline electric
-recordings within 30 minutes after an intervention. The spatial sampling
-must be adequate to discern ischemic zones within the myocardium. From our
-experience, the minimum amount of ischemia required to alter signals on the
-epicardial surface of the heart is roughly 5 mm diameter spheroid
-shapes. Thus, we require resolution at half that size (2.5~mm).  The signal-to-noise ratio must be over 10:1. The combination of these metrics would confirm that the experimental model is accurately recording and controlling transient myocardial ischemia.
+\paragraph{Expected Results} We expect to achieve an experimental model in which we can reproducibly control the ischemic stress on the heart and simultaneously record myocardial electrical potentials from within the myocardium in and around the perfusion bed affected by occlusion, 360-degree coverage of the epicardial surface, and on the body surface.  For this model to be considered valid, it must induce transient episodes of myocardial ischemia within the heart, returning to baseline electric recordings within 30 minutes after an intervention. The spatial sampling must be adequate to discern ischemic zones within the myocardium. From our experience, the minimum amount of ischemia required to alter signals on the epicardial surface of the heart is roughly 5 mm diameter spheroid shapes. Thus, we require resolution at half that size (2.5~mm).  The signal-to-noise ratio must be over 10:1. The combination of these metrics would confirm that the experimental model is accurately recording and controlling transient myocardial ischemia.
 
-To control for potential confounding variables between experiments we will perform ``normalization'' interventions at the beginning of each experiment. These interventions will have a set heart rate and occlusion percentage that is used consistently at the beginning of each experiment. This will provide an indication of the relative differences between each experimental model and if the results can be directly comparable between each model. 
-%%%% Enlarge here
+We expect each animal used during experiments to undergo 5-7 ischemic interventions per experiment with a complete recovery following each intervention. We also expect the model to remain stable during the rest periods between each ischemic interventions. We define stable as a blood pH between ?? and ??, arterial blood pressure between ??? and ???, temperature between ??? and ??? degrees celsius, and blood oxygen saturation between ?? and ??. Significant deviations from these normal physiological values would indicate that the animal was no longer stable and confound the conclusions made during the experiment. 
+
+We expect our signal processing and registration pipeline to produce filtered signals with higher signal to noise ratio compared to initial recordings that have been accurately registered in space. We expect the registrations to be within 5 millimeters of the true electrode position within the heart, on the heart surface, or on the body surface. 
+
+To control for other potential confounding variables between experiments we will perform ``normalization'' interventions at the beginning of each experiment. These interventions will have a set heart rate and occlusion percentage that is used consistently at the beginning of each experiment. This will provide an indication of the relative differences between each experimental model and if the results can be directly comparable between each model. 
 
 
-\paragraph{Potential Problems and Alternative Strategies} The first
-possible hurdle is achieving a tight seal along the chest incision and
-minimal residual air in the chest.  Should either situation arise, we will
-explore different closure materials under guidance from our surgery
-colleagues. To remove excess air, we will apply vacuum suction through
-chest tubes. Another general concern is the stability of the animal
-model. Measures we will explore include implementing a fluid management
-system and an antiarrhythmic drug regimen; tracking the stability using
-blood gas values, blood pressure, ${\rm pCO_2}$, oxygen saturation, and
-blood pH; and reducing the number of needle electrodes.
+\paragraph{Potential Problems and Alternative Strategies} The first possible hurdle is achieving a tight seal along the chest incision and minimal residual air in the chest.  Should either situation arise, we will explore different closure materials under guidance from our surgery colleagues. To remove excess air, we will apply vacuum suction through chest tubes. Another general concern is the stability of the animal model. Measures we will explore include implementing a fluid management system and an antiarrhythmic drug regimen; tracking the stability using blood gas values, blood pressure, ${\rm pCO_2}$, oxygen saturation, and blood pH; and reducing the number of needle electrodes. The fluid management system would follow standard of care surgical practices for fluid maintainence and fluid loss depending on the specifics of the procedure. Replacing fluid would be the ideal stability control because it would have little effect on the conduction of the heart and limit any confounding factors. If the models become extremely unstable, an antiarrhythmic drug regimine will be used. The drug of choice is lidocaine, a class 1b sodium channel blocker, to reduce the arrythmic potential of the heart. Previous myocardial ischemia studies have adminstered lidocaine for stability and have noticed relatively minimal effects on the electrical recordings during ischemia. However, any addition of drugs that change the electrical substrate of the myocardium must be considered as confounding factors. Therefore, the ideal stability method is IV fluids alone. 
 
 
-%%%% Enlarge Here
+\subsection{Aim 2: Test the hypothesis that exercise and dobutamine infusion create identical regions of myocardial ischemia}
 
-\subsubsection{Aim 2: Test the hypothesis that exercise and dobutamine infusion create identical regions of myocardial ischemia}
+ \paragraph{Introduction} Currently, there is no definitive evidence to compare ischemic zones with different heart stressing mechanisms. In this aim we will test the hypothesis that the electrocardiographic response to ischemia has similar features during exercise and dobutamine stress. The approach is to use our experimental model  with high-resolution electrical recordings and  controlled ischemia to characterize the ischemic zones created by each stress mechanism. 
 
- Currently, there is no definitive evidence to compare ischemic zones with
- different heart stressing mechanisms.
-In this aim we will test the
-hypothesis that the electrocardiographic response to ischemia has similar
-features during exercise and dobutamine stress. The approach is to use our
-experimental model
- with high-resolution electrical recordings and
- controlled ischemia
-to characterize the ischemic zones created by each
-stress mechanism. 
+\paragraph{Justification and Feasibility} The justification for this aim is that any differences in the response to these two commonly used forms of cardiac stress should be reflected in the ECG-based metrics and thresholds used in clinical testing.  Despite the assumed similarities between exercise and pharmacological (typically dobutamine) stress, we will be the first to our knowledge to examine the extent, location, or electrocardiographic profile at high resolution of ischemia produced by these two modes. \textbf{Our preliminary results have shown a small difference in the regions of ischemia produced by each stress mechanism, shown in  Figure~\ref{fig:dobutvspacing} and Figure \ref{fig:dobutPacingThreshold}.}
 
-\paragraph{Justification and Feasibility} The justification for this aim
-is that any differences in the response to these two commonly used forms of
-cardiac stress should be reflected in the ECG-based metrics and thresholds
-used in clinical testing.  Despite the assumed similarities between exercise
-and pharmacological (typically dobutamine) stress, we will be the first to
-our knowledge to examine the extent, location, or electrocardiographic
-profile at high resolution of ischemia produced by these two
-modes. \textbf{Our preliminary results have shown a small difference in the
-  regions of ischemia produced by each stress mechanism, shown in
-  Figure~\ref{fig:dobutvspacing}.}
+ We will employ two clinical methods to induce cardiac stress when detecting myocardial ischemia. The first method requires the patient to exercise at a set level and steadily  increase the exercise rate at set intervals.\cite{BLZ:Oki1986} The most common exercise protocol is the Bruce stress test protocol, which has five exercise stages, with each stage lasting 3 minutes.\cite{BLZ:GOL1976,BLZ:Bru1963,BLZ:Oki1986} If a patient is unable to exercise, a pharmacological stress test with dobutamine can be used.\cite{BLZ:SAL1992,BLZ:Gre1997,BLZ:Man1988} Dobutamine is primarily a beta 1 agonist which increases heart rate and contractility and simulates exercise. 
 
- We will employ two clinical methods
- to induce cardiac stress when detecting myocardial ischemia. The first
- method requires the patient to exercise at a set level and steadily
- increase the exercise rate at set intervals.\cite{BLZ:Oki1986} The most
- common exercise protocol is the Bruce stress test protocol, which has five
- exercise stages, with each stage lasting 3
- minutes.\cite{BLZ:GOL1976,BLZ:Bru1963,BLZ:Oki1986} If a patient is unable
- to exercise, a pharmacological stress test with dobutamine can be
- used.\cite{BLZ:SAL1992,BLZ:Gre1997,BLZ:Man1988} Dobutamine is primarily a
- beta 1 agonist which increases heart rate and contractility and simulates
- exercise. 
+Several studies have demonstrated differences in performance between exercise and dobutamine stress tests using a variety of markers.  From an anatomical point of view, the ischemic zones created should not be different. However, with complex physiology, possible drug binding to other receptors, and many other confounding factors, the possibility for differences cannot be ruled out. If the ischemic zones created are different, ischemia detection methods may have to be tailored to the cardiac stress type, or at the very least, physicians should be informed of the possible differences between the ischemic zones created by each mechanism.  
 
-Several studies have demonstrated differences in performance between
-exercise and dobutamine stress tests using a variety of markers.  From an anatomical point of view, the ischemic
-zones created should not be different. However, with complex physiology,
-possible drug binding to other receptors, and many other confounding
-factors, the possibility for differences cannot be ruled out. If the
-ischemic zones created are different, ischemia detection methods may have
-to be tailored to the cardiac stress type, or at the very least, physicians
-should be informed of the possible differences between the ischemic zones
-created by each mechanism.  
-
-\paragraph{Experimental Design} Using the experimental system described
-above, we will compare rapid pacing (simulating exercise) and dobutamine infusion for their
-ability to create ischemia. Our proof of concept results suggest we can
-carry out both stresses in the same animal and that they may produce
-different results.  To simulate exercise stress, we will first determine
-the resting heart rate and apply stepwise increase as per the Bruce
-exercise stress protocol (6--8 steps at 3-minute
-duration).\cite{BLZ:Oki1986} Pharmacological stress will occur by infusions
-at 5--40 ug/kg/min per the dobutamine protocol (6--8 steps at 3-minute
-duration).\cite{BLZ:SAL1992} Recovery between repeated episodes will last
-30 minutes. Vascular occlusion will be held constant for each
-intervention. To reduce order dependencies, we will vary the pattern of
-interventions. We will compare relative differences between ischemic zones induced within experiments to control for vasculature and other physiological variability.
+\paragraph{Experimental Design} Using the experimental system described above, we will compare rapid pacing (simulating exercise) and dobutamine infusion for their ability to create ischemia. Our proof of concept results suggest we can carry out both stresses in the same animal and that they may produce different results.  To simulate exercise stress, we will first determine the resting heart rate and apply stepwise increase as per the Bruce exercise stress protocol (6--8 steps at 3-minute duration).\cite{BLZ:Oki1986} Pharmacological stress will occur by infusions at 5--40 ug/kg/min per the dobutamine protocol (6--8 steps at 3-minute duration).\cite{BLZ:SAL1992} Recovery between repeated episodes will last 30 minutes. Vascular occlusion will be held constant for each intervention. To reduce order dependencies, we will vary the pattern of interventions. We will compare relative differences between ischemic zones induced within experiments to control for vasculature and other physiological variability.
 
 
 \begin{figure}[htb]%{\textwidth}
     % \begin{figure}[htb]
-    \vspace{-.3in}
+   % \vspace{-.3in}
     \begin{center}
         {\includegraphics[width=\textwidth]
           {../Figures/fig2.png}}
@@ -249,7 +173,7 @@ interventions. We will compare relative differences between ischemic zones induc
           intramural, epicardial surface, and torso surface recordings
           during peak ischemia for dobutamine and pacing protocols.}
     \end{center}
-    \vspace{-.25in}
+   % \vspace{-.25in}
     % \end{figure}
 \end{figure}
 
@@ -274,6 +198,21 @@ different stress tests is identical. With identical occlusion amounts and
 locations along the coronary vasculature, the two regions of ischemia
 should be the same. 
 
+\begin{wrapfloat}{figure}{r}{0.7\textwidth}
+%\begin{figure}[htb]%{\textwidth}
+	% \begin{figure}[htb]
+	% \vspace{-.3in}
+	\begin{center}
+		{\includegraphics[width=.7\textwidth]
+			{../Figures/DobutvsPacing.png}}
+		\captionsetup{width = .7\textwidth}
+		\caption{\small \label{fig:dobutPacingThreshold} Images of thresholded ischemic zones during the initial phases of an ischemic intervention across two experimental models using dobutamine and pacing cardiac stress protocols. Note the similarities and differences between ischemic regions in the paced vs. dobutamine cardiac stress methods. }
+	\end{center}
+	% \vspace{-.25in}
+	% \end{figure}
+%\end{figure}
+\end{wrapfloat}
+
 To limit the possible confounding factor of the order of each intervention within an experiment we will vary the intervention order per experiment, \ie{} start with a dobutamine stress protocol then a bruce stress protocol in one experiment vica versa in the next experiment. 
 
 The experimental results will be interpreted as ...... 
@@ -289,9 +228,9 @@ similar influences, such as isoproterenol to increase heart rate alone,
 arbutamine to increase heart rate and contractility, or other similar
 beta-1 agonist or cardiac stimulants.
 
-\subsubsection{Aim 3: Test the hypothesis that ECG imaging techniques can be used to detect and localize ischemic regions within the heart}
+\subsection{Aim 3: Test the hypothesis that ECG imaging techniques can be used to detect and localize ischemic regions within the heart}
 
-The objective of this aim is to develop and apply a novel ECGI approach to
+ \paragraph{Introduction} The objective of this aim is to develop and apply a novel ECGI approach to
 localize and detect ischemic sources within the heart. We will use our
 expertise in ECGI techniques in conjunction with our refined experimental
 models. Success in this aim will impact clinical care of a very common
@@ -368,6 +307,18 @@ the constraints via a variety of possible optimization methods. Both the
 constraints and optimization method applied can be customized to fit the
 specific problem being solved.
 
+\begin{figure}[htb]%{\textwidth}
+	% \begin{figure}[htb]
+	% \vspace{-.3in}
+	\begin{center}
+		{\includegraphics[width=\textwidth]
+			{../Figures/ForwardInverseProbs.png}}
+		\captionsetup{width = \textwidth}
+		\caption{\small \label{fig:forwardInverse} Description of the forward inverse model as applied to myocardial electrical signals. The forward problem solves for the torso surface potentials through the volume conductor from a known bioelectrical source. The inverse method is the forward method in reverse and solves for cardiac sources through the volume conductor from the body surface potentials. It is important to note that the forward problem has a higher degree of uniqueness compared to the inverse problem, and the inverse problem is inherently ill-posed, meaning small changes in body surface recordings produce unbounded changes in the source solutions. These differences necessitate and added step when solving the inverse problem called regularization. }
+	\end{center}
+	% \vspace{-.25in}
+	% \end{figure}
+\end{figure}
 
 The main design choices in implementing ECGI, \ie{} of solving this inverse
 problem, include the particular representation of the cardiac sources, the
@@ -426,6 +377,31 @@ localize and detect the ischemic sources within the myocardium.
 
 %%% Enlarge Here
 
+\begin{figure}[htb]%{\textwidth}
+	% \begin{figure}[htb]
+	% \vspace{-.3in}
+	\begin{center}
+		{\includegraphics[width=\textwidth]
+			{../Figures/wangECGI.png}}
+		\captionsetup{width = \textwidth}
+		\caption{\small \label{fig:wang} Example figure of ECGI techniques used to solve for transmural potentials within the heart performed by Wang \etal.\cite{RSM:Wan2013}. The "True Ischemic Region" was simulated by manually modifying the transmembrane potentials within that region and simulated epicardial and torso recordings were created using the forward problem approximation. Noise was then introduced to the epicardial and torso recordings at varying levels and the inverse problem was solved with the corresponding signals. Note that the Tikhonov regularization method outperforms the total variation regularization method in each case. }
+	\end{center}
+	% \vspace{-.25in}
+	% \end{figure}
+\end{figure}
+
+\begin{figure}[htb]%{\textwidth}
+	% \begin{figure}[htb]
+	% \vspace{-.3in}
+	\begin{center}
+		{\includegraphics[width=\textwidth]
+			{../Figures/wangVolume.png}}
+		\captionsetup{width = \textwidth}
+		\caption{\small \label{fig:wang} Example figure of ECGI techniques used to solve for transmural potentials within the heart performed by Wang \etal.\cite{RSM:Wan2013}. The "True Ischemic Region" was simulated by manually modifying the transmembrane potentials within that region and simulated epicardial and torso recordings were created using the forward problem approximation. Noise was then introduced to the epicardial and torso recordings at varying levels and the inverse problem was solved with the corresponding signals. Note that the Tikhonov regularization method outperforms the total variation regularization method in each case. }
+	\end{center}
+	% \vspace{-.25in}
+	% \end{figure}
+\end{figure}
 \paragraph{Potential Problems and Alternative Strategies} Applying ECGI
 includes many design and parameter choices, which provide both challenges
 and a wide range of alternative strategies. The most basic choice is the
