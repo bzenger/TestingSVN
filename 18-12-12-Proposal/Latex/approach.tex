@@ -180,6 +180,8 @@ Several studies have demonstrated differences in performance between exercise an
 
 Data analysis will consist of comparing the extent and the characteristics of the ischemic regions over time that arise from the two different stress interventions. The relevant time points within the signals for this study are the ST40\%, J point plus 60 milliseconds, and T-wave peak. The ST40\% is calculated by taking identifying the voltage at 40\% of the ST segment time. The J point plus 60 milliseconds is the voltage of the signal at 60 milliseconds from the end of the QRS complex. The T-wave peak is the voltage of the signal at the T-peak time instance as identified on the root mean squared curve of all the recorded signals. Each of these metrics will be evaluated for differences between the two cardiac stress mechanisms. First, the ST40\% value across the entire region of perfusion will be compared using Pearson's correlation coefficient and relative error approximations. Next, thresholds to the ST40\% values measured will be applied at multiple time points within the ischemic intervention, which will create distinct volumes of ischemia. Both the three-dimensional volume and location of the ischemic zones will be compared using Dice overlap coefficients and statistical shape analysis. This analysis will be repeated for J point plus 60 milliseconds and T-wave peak voltages. 
 
+We performed a preliminary power analysis to approximate the number of animals and experiments needed to detect statistical differences with an alpha value of 0.05 and a beta value of 0.20. Using our preliminary results, we expect to need ?? animal experiments. Given that 25\% of these experiments are not successful we approximate the total number of animal experiments needed to be ??. 
+
 \paragraph{Expected Results} Based in preliminary results, we expect some
 variation to arise between the two stress mechanisms.  We will use the Dice
 coefficient to test our null hypothesis (greater than 80\% overlap), and
@@ -207,7 +209,7 @@ should be the same.
 
 To limit the possible confounding factor of the order of each intervention within an experiment we will vary the intervention order per experiment, \ie{} start with a dobutamine stress protocol then a bruce stress protocol in one experiment vica versa in the next experiment. 
 
-The experimental results will be interpreted as ...... 
+The difference of the two volumes of ischemia created during the dobutamine stress test or an exercise stress tests will be considered statistically significant if the p-value is less than 0.05. However, statistical significance of the ischemia volume is not the only metric significant to clinical treatment. We will also examine how the epicardial surface and body surface recordings change during each intervention type. On these surfaces, we expect differences seen in the dobutamine vs. exercise protocols to be less pronounced and more difficult to detect using conventional clinical metrics. This blurring of the true ischemic zone and what is detected on the surface could be from electrical attenuation through the volume conductor, passive conductive properties of the volume conductor, or certain surface measurement techniques. 
 
 
 \paragraph{Potential Problems and Alternative Strategies} This study is
@@ -350,6 +352,7 @@ along with absolute maximal errors.  In addition, we will use thresholds of
 ischemic TMP values to determine the volume, shape, and location of
 ischemic zones, measured by the Dice overlap coefficient.
 
+
 \paragraph{Expected Results} We must achieve several specific results for
 this ECGI approach to serve as a viable method to detect ischemia. First,
 the method must reproducibly detect ischemic regions down to regions
@@ -382,31 +385,32 @@ localize and detect the ischemic sources within the myocardium.
 	% \end{figure}
 \end{figure}
 
-\begin{figure}[htb]%{\textwidth}
-	% \begin{figure}[htb]
-	% \vspace{-.3in}
-	\begin{center}
-		{\includegraphics[width=\textwidth]
-			{../Figures/wangVolume.png}}
-		\captionsetup{width = \textwidth}
-		\caption{\small \label{fig:wang} Example figure of ECGI techniques used to solve for transmural potentials within the heart performed by Wang \etal.\cite{RSM:Wan2013}. The "True Ischemic Region" was simulated by manually modifying the transmembrane potentials within that region and simulated epicardial and torso recordings were created using the forward problem approximation. Noise was then introduced to the epicardial and torso recordings at varying levels and the inverse problem was solved with the corresponding signals. Note that the Tikhonov regularization method outperforms the total variation regularization method in each case. }
-	\end{center}
-	% \vspace{-.25in}
-	% \end{figure}
-\end{figure}
+%\begin{figure}[htb]%{\textwidth}
+%	% \begin{figure}[htb]
+%	% \vspace{-.3in}
+%	\begin{center}
+%		{\includegraphics[width=\textwidth]
+%			{../Figures/wangVolume.png}}
+%		\captionsetup{width = \textwidth}
+%		\caption{\small \label{fig:wang} Example figure of ECGI techniques used to solve for transmural potentials within the heart performed by Wang \etal.\cite{RSM:Wan2013}. The "True Ischemic Region" was simulated by manually modifying the transmembrane potentials within that region and simulated epicardial and torso recordings were created using the forward problem approximation. Noise was then introduced to the epicardial and torso recordings at varying levels and the inverse problem was solved with the corresponding signals. Note that the Tikhonov regularization method outperforms the total variation regularization method in each case. }
+%	\end{center}
+%	% \vspace{-.25in}
+%	% \end{figure}
+%\end{figure}
 \paragraph{Potential Problems and Alternative Strategies} Applying ECGI
 includes many design and parameter choices, which provide both challenges
 and a wide range of alternative strategies. The most basic choice is the
 source of cardiac bioelectricity, which we could adjust from transmembrane
 to extracellular potentials, an approached used in the past by us and
-others with known strengths and weaknesses \cite{RSM:Mac95,RSM:Ost97b}. We
-could also increase the number and nature of the constraints to force known
+others with known strengths and weaknesses \cite{RSM:Mac95,RSM:Ost97b}.
+
+ We could also increase the number and nature of the constraints to force known
 shapes and textures of ischemic sources. However, increasing the number of
 constraints introduces more inherent bias toward a particular solution,
 which, in turn, may produce misleading ischemic sources. Other mathematical
 optimization methods could also be used for this
 application\cite{RSM:Ahm94,RSM:Bro96b,RSM:Ahm98,
-  RSM:Gha2001,RSM:Ost92,RSM:Ost97c,RSM:Ram2003,RSM:Clu2018}.
+  RSM:Gha2001,RSM:Ost92,RSM:Ost97c,RSM:Ram2003,RSM:Clu2018}. these methods include
 
 %%%% Enlarge Here
 
