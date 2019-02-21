@@ -161,6 +161,21 @@ Several studies have demonstrated differences in performance between exercise an
 
 \paragraph{Experimental Design} Using the experimental system described above, we will compare rapid pacing (simulating exercise) and dobutamine infusion for their ability to create ischemia. Our proof of concept results suggest we can carry out both stresses in the same animal and that they may produce different results.  To simulate exercise stress, we will first determine the resting heart rate and apply stepwise increase as per the Bruce exercise stress protocol (6--8 steps at 3-minute duration).\cite{BLZ:Oki1986} Pharmacological stress will occur by infusions at 5--40 ug/kg/min per the dobutamine protocol (6--8 steps at 3-minute duration).\cite{BLZ:SAL1992} Recovery between repeated episodes will last 30 minutes. Vascular occlusion will be held constant for each intervention. To reduce order dependencies, we will vary the pattern of interventions. We will compare relative differences between ischemic zones induced within experiments to control for vasculature and other physiological variability. The occlusion percentage will be set and stay consistent across each ischemia intervention during the experiment. To determine the occlusion percentage we will incrementally increase the calibrated occlusion percentage of the vessel from 50-90\% in 10\% intervals while the animal is paced at the maximum pacing rate. At each increment the heart will be given time to adjust, and any instabilities will be noted. The presence of 3 or more sequential premature ventricular contractions will indicate that the maximum occlusion percentage has been reached for this particular experimental animal. This will be the set occlusion percentage used throughout the experiment during ishcemic interventions. 
 
+\begin{figure}[htb]%{\textwidth}
+	% \begin{figure}[htb]
+	% \vspace{-.3in}
+	\begin{center}
+		{\includegraphics[width=\textwidth]
+			{../Figures/DobutvsPacingProtocol.png}}
+		\captionsetup{width = \textwidth}
+		\caption{\small \label{fig:dobutvspacing} Images of the
+			intramural, epicardial surface, and torso surface recordings
+			during peak ischemia for dobutamine and pacing protocols.}
+	\end{center}
+	% \vspace{-.25in}
+	% \end{figure}
+\end{figure}
+
 
 \begin{figure}[htb]%{\textwidth}
     % \begin{figure}[htb]
@@ -192,8 +207,12 @@ different stress tests is identical. With identical occlusion amounts and
 locations along the coronary vasculature, the two regions of ischemia
 should be the same. 
 
+To limit the possible confounding factor of the order of each intervention within an experiment we will vary the intervention order per experiment, \ie{} start with a dobutamine stress protocol then a bruce stress protocol in one experiment vica versa in the next experiment. 
+
+The difference of the two volumes of ischemia created during the dobutamine stress test or an exercise stress tests will be considered statistically significant if the p-value is less than 0.05. However, statistical significance of the ischemia volume is not the only metric significant to clinical treatment. We will also examine how the epicardial surface and body surface recordings change during each intervention type. On these surfaces, we expect differences seen in the dobutamine vs. exercise protocols to be less pronounced and more difficult to detect using conventional clinical metrics. This blurring of the true ischemic zone and what is detected on the surface could be from electrical attenuation through the volume conductor, passive conductive properties of the volume conductor, or certain surface measurement techniques. 
+
 \begin{wrapfloat}{figure}{r}{0.7\textwidth}
-%\begin{figure}[htb]%{\textwidth}
+	%\begin{figure}[htb]%{\textwidth}
 	% \begin{figure}[htb]
 	% \vspace{-.3in}
 	\begin{center}
@@ -204,23 +223,25 @@ should be the same.
 	\end{center}
 	% \vspace{-.25in}
 	% \end{figure}
-%\end{figure}
+	%\end{figure}
 \end{wrapfloat}
-
-To limit the possible confounding factor of the order of each intervention within an experiment we will vary the intervention order per experiment, \ie{} start with a dobutamine stress protocol then a bruce stress protocol in one experiment vica versa in the next experiment. 
-
-The difference of the two volumes of ischemia created during the dobutamine stress test or an exercise stress tests will be considered statistically significant if the p-value is less than 0.05. However, statistical significance of the ischemia volume is not the only metric significant to clinical treatment. We will also examine how the epicardial surface and body surface recordings change during each intervention type. On these surfaces, we expect differences seen in the dobutamine vs. exercise protocols to be less pronounced and more difficult to detect using conventional clinical metrics. This blurring of the true ischemic zone and what is detected on the surface could be from electrical attenuation through the volume conductor, passive conductive properties of the volume conductor, or certain surface measurement techniques. 
 
 
 \paragraph{Potential Problems and Alternative Strategies} This study is
 focused on ST-segment shifts as the basis for ischemia determination, but
 we will explore other reported metrics in the electrogram signal, which
 include the end of the QRS, peak of the T wave, or peak-to-peak amplitude
-of the QRS. Another potential problem is adverse reactions to dobutamine
+of the QRS. Each of these metrics have been suggested to indicate ischemia based on body surface ECG recordings and have relatively a strong biophysical basis for changes in the electrical signature. In addition, we could also apply machine learning algorithms and other signal processing techniques to identify the unique characteristics of recordings from each type of intervention. These include neural networks, deconvolution, and principle component analysis. 
+
+
+
+Another potential problem is adverse reactions to dobutamine
 infusion in the animal, for which we would substitute other drugs with
 similar influences, such as isoproterenol to increase heart rate alone,
 arbutamine to increase heart rate and contractility, or other similar
-beta-1 agonist or cardiac stimulants.
+beta-1 agonist or cardiac stimulants. 
+
+Other issues could present including how dobutamine or other drug infusions affect the body for long periods of time. Dobutamine is estimated to affect a person for a period of minutes after stopping administration of the drug. However, the effects of dobutamine may persist longer than the physical symptoms reported by patients. If this is the case, we will increase the recovery time between dobutamine interventions to protect against any residual effects from the prior intervention. We will also vary the order of the different types of interventions to ensure no significant changes occur to interventions before or after other interventions \ie{} intervention order dependent results. 
 
 \subsection{Aim 3: Test the hypothesis that ECG imaging techniques can be used to detect and localize ischemic regions within the heart}
 
@@ -402,17 +423,14 @@ includes many design and parameter choices, which provide both challenges
 and a wide range of alternative strategies. The most basic choice is the
 source of cardiac bioelectricity, which we could adjust from transmembrane
 to extracellular potentials, an approached used in the past by us and
-others with known strengths and weaknesses \cite{RSM:Mac95,RSM:Ost97b}.
+others with known strengths and weaknesses \cite{RSM:Mac95,RSM:Ost97b}. Deviating from the proposed transmembrane approach would allow us to draw a direct comparison between the measured extracellular potentials from experimental recordings and the simulated extracellular potentials from various ECGI approaches. However, extracellular approaches have notoriously been poor at detecting small details within the signal where most indications of myocardial ischemia exist. Another potential issue with using extracellular potentials is the ability to calculate extracellular potential within the entire volume of the heart wall. This is a numerically difficult problem that requires large assumptions about the intracellular electrical to be made. These two limitations make the transmembrane approach more suitable for the application of myocardial ischemia but extracellular potential based approaches are still viable alternatives.  
 
  We could also increase the number and nature of the constraints to force known
-shapes and textures of ischemic sources. However, increasing the number of
-constraints introduces more inherent bias toward a particular solution,
-which, in turn, may produce misleading ischemic sources. Other mathematical
-optimization methods could also be used for this
-application\cite{RSM:Ahm94,RSM:Bro96b,RSM:Ahm98,
-  RSM:Gha2001,RSM:Ost92,RSM:Ost97c,RSM:Ram2003,RSM:Clu2018}. these methods include
+shapes and textures of ischemic sources. These include forcing known or predicted shapes of ischemic regions within the heart volume, analyzing and eliminating solutions based on the continuous or sporadic nature of the ischemic region, or applying temporal constraints to force "consistent" ischemic zones present for an arbitrary period of time. However, increasing the number of constraints introduces more inherent bias toward a particular solution, which, in turn, may produce misleading ischemic sources. Despite our best efforts to remove bias from the solution, if we apply constraints based on texture, shape, or temporal parameters were are forcing specific solutions to be seen, rather than looking at the solution data in its entirety. 
 
-%%%% Enlarge Here
+Other mathematical optimization methods could also be used for this application\cite{RSM:Ahm94,RSM:Bro96b,RSM:Ahm98,RSM:Gha2001,RSM:Ost92,RSM:Ost97c,RSM:Ram2003,RSM:Clu2018}. These methods are numerous and span several decades and various scientific fields. Likely candidates based on previous research and current bioelectricity projects include multiple order Tikhonov techniques (zero, first, or second order), total variation optimization, or method of fundamental solutions (MFS). Each of these methods have different advantages or disadvantages depending on the specific application. For this study, the total variation method offers the most economical and customizable approach. 
+
+
 
 %
 %%\begin{wrapfigure}[25]{r}{0.6\textwidth}
@@ -451,7 +469,7 @@ application\cite{RSM:Ahm94,RSM:Bro96b,RSM:Ahm98,
 %    \end{numlist}
 %  \item[Year 3:] \mbox{}
 %    \begin{numlist}
-%      \item 
+%  em 
 %      \item 
 %    \end{numlist}
 %  \item[Year 4:] \mbox{}
