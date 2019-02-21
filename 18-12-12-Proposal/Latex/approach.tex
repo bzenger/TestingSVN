@@ -79,15 +79,15 @@ heart. Thus, the experiments proposed here are justified as the only means
  feasible based on previous results from the literature and our group.
 
 
-\begin{wrapfloat}{figure}{r}{0.7\textwidth}
-	% \begin{figure}[htb]
+%\begin{wrapfloat}{figure}{r}{1\textwidth}
+ \begin{figure}[htb]
 	%     \intextsep{0pt}
 	%     \columnsep{3pt}
 %	\vspace{-.3in}
 	\begin{center}
-		{\includegraphics[width=0.7\textwidth]
+		{\includegraphics[width=1\textwidth]
 			{../Figures/fig1.png}}
-		\captionsetup{width = 0.7\textwidth}
+		\captionsetup{width = 1\textwidth}
 		\caption{\small \label{fig:prep} Experimental preparation
 			components. A. Needle electrode array B. Sock electrode array
 			C. Torso surface recordings D. Needle and sock electrodes
@@ -95,8 +95,8 @@ heart. Thus, the experiments proposed here are justified as the only means
 			location E. Heart and torso surface registered.}
 	\end{center}
 %	\vspace{-.4in}
-	% \end{figure}
-\end{wrapfloat}
+ \end{figure}
+%\end{wrapfloat}
 
 \paragraph{Experimental Design}
 
@@ -146,7 +146,9 @@ We expect our signal processing and registration pipeline to produce filtered si
 To control for other potential confounding variables between experiments we will perform ``normalization'' interventions at the beginning of each experiment. These interventions will have a set heart rate and occlusion percentage that is used consistently at the beginning of each experiment. This will provide an indication of the relative differences between each experimental model and if the results can be directly comparable between each model. 
 
 
-\paragraph{Potential Problems and Alternative Strategies} The first possible hurdle is achieving a tight seal along the chest incision and minimal residual air in the chest.  Should either situation arise, we will explore different closure materials under guidance from our surgery colleagues. To remove excess air, we will apply vacuum suction through chest tubes. Another general concern is the stability of the animal model. Measures we will explore include implementing a fluid management system and an antiarrhythmic drug regimen; tracking the stability using blood gas values, blood pressure, ${\rm pCO_2}$, oxygen saturation, and blood pH; and reducing the number of needle electrodes. The fluid management system would follow standard of care surgical practices for fluid maintainence and fluid loss depending on the specifics of the procedure. Replacing fluid would be the ideal stability control because it would have little effect on the conduction of the heart and limit any confounding factors. If the models become extremely unstable, an antiarrhythmic drug regimine will be used. The drug of choice is lidocaine, a class 1b sodium channel blocker, to reduce the arrythmic potential of the heart. Previous myocardial ischemia studies have adminstered lidocaine for stability and have noticed relatively minimal effects on the electrical recordings during ischemia. However, any addition of drugs that change the electrical substrate of the myocardium must be considered as confounding factors. Therefore, the ideal stability method is IV fluids alone. 
+\paragraph{Potential Problems and Alternative Strategies} The first possible hurdle is achieving a tight seal along the chest incision and minimal residual air in the chest.  Should either situation arise, we will explore different closure materials under guidance from our surgery colleagues. To remove excess air, we will apply vacuum suction through chest tubes. Chest tubes will be placed within the pleural, the mediastinum, and the pericardial spaces. The vacuum suction will be held between 20 and 40 cm $H_2O$ as per current medical practice to limit damage to organs within the thoracic cavity. In addition, glue and vacuum grease will be applied to the suture site and around all openings and potential leak sites. We will use a combination of ultrasound imaging and electrical recording techniques to determine if air is still present within the thoracic cavity. 
+
+Another general concern is the stability of the animal model. Measures we will explore include implementing a fluid management system and an antiarrhythmic drug regimen; tracking the stability using blood gas values, blood pressure, ${\rm pCO_2}$, oxygen saturation, and blood pH; and reducing the number of needle electrodes. The fluid management system would follow standard of care surgical practices for fluid maintenance and fluid loss depending on the specifics of the procedure. Replacing fluid would be the ideal stability control because it would have little effect on the conduction of the heart and limit any confounding factors. If the models become extremely unstable, an antiarrhythmic drug regimen will be used. The drug of choice is lidocaine, a class 1b sodium channel blocker, to reduce the arrythmic potential of the heart. Previous myocardial ischemia studies have administered lidocaine for stability and have noticed relatively minimal effects on the electrical recordings during ischemia. However, any addition of drugs that change the electrical substrate of the myocardium must be considered as confounding factors. Therefore, the ideal stability method is IV fluids alone. 
 
 
 \subsection{Aim 2: Test the hypothesis that exercise and dobutamine infusion create identical regions of myocardial ischemia}
@@ -168,9 +170,7 @@ Several studies have demonstrated differences in performance between exercise an
 		{\includegraphics[width=\textwidth]
 			{../Figures/DobutvsPacingProtocol.png}}
 		\captionsetup{width = \textwidth}
-		\caption{\small \label{fig:dobutvspacing} Images of the
-			intramural, epicardial surface, and torso surface recordings
-			during peak ischemia for dobutamine and pacing protocols.}
+		\caption{\small \label{fig:dobutvspacingprotocol} Example schematic of a dobutamine and BRUCE pacing protocol. A. In this schematic the infusion rate is held constant for three minute intervals and increased ever three minute interval. The resulting heart rate can bee seen as a gradual curve that plateaus prior to the end of the interval. The BRUCE pacing protocol consists of a constant heart rate held for a three minute interval. This heart rate is increased for each interval based on the average heart rates increases above resting by patients during a BRUCE exercise cardiac stress test.}
 	\end{center}
 	% \vspace{-.25in}
 	% \end{figure}
@@ -185,8 +185,8 @@ Several studies have demonstrated differences in performance between exercise an
           {../Figures/fig2.png}}
         \captionsetup{width = \textwidth}
         \caption{\small \label{fig:dobutvspacing} Images of the
-          intramural, epicardial surface, and torso surface recordings
-          during peak ischemia for dobutamine and pacing protocols.}
+          intramural, epicardial surface, and torso surface ST40 recordings
+          during peak ischemia for dobutamine and pacing protocols. Note the complex nature of the ischemic region identified in the transmural myocardial recordings. Also note the similarities of the epicardial and torso surface potential shapes. }
     \end{center}
    % \vspace{-.25in}
     % \end{figure}
@@ -195,7 +195,7 @@ Several studies have demonstrated differences in performance between exercise an
 
 Data analysis will consist of comparing the extent and the characteristics of the ischemic regions over time that arise from the two different stress interventions. The relevant time points within the signals for this study are the ST40\%, J point plus 60 milliseconds, and T-wave peak. The ST40\% is calculated by taking identifying the voltage at 40\% of the ST segment time. The J point plus 60 milliseconds is the voltage of the signal at 60 milliseconds from the end of the QRS complex. The T-wave peak is the voltage of the signal at the T-peak time instance as identified on the root mean squared curve of all the recorded signals. Each of these metrics will be evaluated for differences between the two cardiac stress mechanisms. First, the ST40\% value across the entire region of perfusion will be compared using Pearson's correlation coefficient and relative error approximations. Next, thresholds to the ST40\% values measured will be applied at multiple time points within the ischemic intervention, which will create distinct volumes of ischemia. Both the three-dimensional volume and location of the ischemic zones will be compared using Dice overlap coefficients and statistical shape analysis. This analysis will be repeated for J point plus 60 milliseconds and T-wave peak voltages. 
 
-We performed a preliminary power analysis to approximate the number of animals and experiments needed to detect statistical differences with an alpha value of 0.05 and a beta value of 0.20. Using our preliminary results, we expect to need ?? animal experiments. Given that 25\% of these experiments are not successful we approximate the total number of animal experiments needed to be ??. 
+We performed a preliminary power analysis to approximate the number of animals and experiments needed to detect statistical differences with an alpha value of 0.05 and a statistical power of 0.95. Using our preliminary results, we expect to need 8 animal experiments. Given that approximately 25\% of these experiments are not successful we approximate the total number of animal experiments needed to be 10 animal studies. 
 
 \paragraph{Expected Results} Based in preliminary results, we expect some
 variation to arise between the two stress mechanisms.  We will use the Dice
@@ -209,8 +209,27 @@ should be the same.
 
 To limit the possible confounding factor of the order of each intervention within an experiment we will vary the intervention order per experiment, \ie{} start with a dobutamine stress protocol then a bruce stress protocol in one experiment vica versa in the next experiment. 
 
+
 The difference of the two volumes of ischemia created during the dobutamine stress test or an exercise stress tests will be considered statistically significant if the p-value is less than 0.05. However, statistical significance of the ischemia volume is not the only metric significant to clinical treatment. We will also examine how the epicardial surface and body surface recordings change during each intervention type. On these surfaces, we expect differences seen in the dobutamine vs. exercise protocols to be less pronounced and more difficult to detect using conventional clinical metrics. This blurring of the true ischemic zone and what is detected on the surface could be from electrical attenuation through the volume conductor, passive conductive properties of the volume conductor, or certain surface measurement techniques. 
 
+
+
+\paragraph{Potential Problems and Alternative Strategies} This study is
+focused on ST-segment shifts as the basis for ischemia determination, but
+we will explore other reported metrics in the electrogram signal, which
+include the end of the QRS, peak of the T wave, or peak-to-peak amplitude
+of the QRS. Each of these metrics have been suggested to indicate ischemia based on body surface ECG recordings and have relatively a strong biophysical basis for changes in the electrical signature. In addition, we could also apply machine learning algorithms and other signal processing techniques to identify the unique characteristics of recordings from each type of intervention. These include neural networks, deconvolution, and principle component analysis. 
+
+Another potential problem is adverse reactions to dobutamine
+infusion in the animal, for which we would substitute other drugs with
+similar influences, such as isoproterenol to increase heart rate alone,
+arbutamine to increase heart rate and contractility, or other similar
+beta-1 agonist or cardiac stimulants. 
+
+
+
+
+Other issues could present including how dobutamine or other drug infusions affect the body for long periods of time. Dobutamine is estimated to affect a person for a period of minutes after stopping administration of the drug. However, the effects of dobutamine may persist longer than the physical symptoms reported by patients. If this is the case, we will increase the recovery time between dobutamine interventions to protect against any residual effects from the prior intervention. We will also vary the order of the different types of interventions to ensure no significant changes occur to interventions before or after other interventions \ie{} intervention order dependent results. 
 \begin{wrapfloat}{figure}{r}{0.7\textwidth}
 	%\begin{figure}[htb]%{\textwidth}
 	% \begin{figure}[htb]
@@ -225,23 +244,6 @@ The difference of the two volumes of ischemia created during the dobutamine stre
 	% \end{figure}
 	%\end{figure}
 \end{wrapfloat}
-
-
-\paragraph{Potential Problems and Alternative Strategies} This study is
-focused on ST-segment shifts as the basis for ischemia determination, but
-we will explore other reported metrics in the electrogram signal, which
-include the end of the QRS, peak of the T wave, or peak-to-peak amplitude
-of the QRS. Each of these metrics have been suggested to indicate ischemia based on body surface ECG recordings and have relatively a strong biophysical basis for changes in the electrical signature. In addition, we could also apply machine learning algorithms and other signal processing techniques to identify the unique characteristics of recordings from each type of intervention. These include neural networks, deconvolution, and principle component analysis. 
-
-
-
-Another potential problem is adverse reactions to dobutamine
-infusion in the animal, for which we would substitute other drugs with
-similar influences, such as isoproterenol to increase heart rate alone,
-arbutamine to increase heart rate and contractility, or other similar
-beta-1 agonist or cardiac stimulants. 
-
-Other issues could present including how dobutamine or other drug infusions affect the body for long periods of time. Dobutamine is estimated to affect a person for a period of minutes after stopping administration of the drug. However, the effects of dobutamine may persist longer than the physical symptoms reported by patients. If this is the case, we will increase the recovery time between dobutamine interventions to protect against any residual effects from the prior intervention. We will also vary the order of the different types of interventions to ensure no significant changes occur to interventions before or after other interventions \ie{} intervention order dependent results. 
 
 \subsection{Aim 3: Test the hypothesis that ECG imaging techniques can be used to detect and localize ischemic regions within the heart}
 
